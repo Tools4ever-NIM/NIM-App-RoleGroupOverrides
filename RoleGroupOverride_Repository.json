@@ -1,9 +1,9 @@
 {
-    "name": "repo_RGO_v1",
+    "name": "RoleGroupOverrides_App_repo_20250630",
     "type": "partial",
-    "host": "Dev_NIM",
-    "created": 1747675186261,
-    "comment": "Role Group Override App - Initial Release",
+    "host": "DevNIM",
+    "created": 1751316521434,
+    "comment": "Role Group Override App - v4",
     "resources": [
         {
             "name": "internal.RoleGroupOverrides.GroupID-AD.Groups.objectGUID",
@@ -307,12 +307,13 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747250542622,
+                    "created_date_time": 1751315319352,
                     "created_by_id": 2,
-                    "modified_date_time": 1747669708277,
+                    "modified_date_time": 1751315456025,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Provides data to Audit Query used in main app grid, list of groups with overrides.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -347,8 +348,7 @@
                         "enabled": true,
                         "index": 1,
                         "parent": 0,
-                        "child_count": 2,
-                        "parentId": "ce135f9b-c42b-420d-864b-ed557e211090"
+                        "child_count": 2
                     },
                     {
                         "field_name": "path",
@@ -365,8 +365,7 @@
                         "enabled": true,
                         "index": 2,
                         "parent": 1,
-                        "child_count": 0,
-                        "parentId": "cf369cd9-42bf-433d-bc20-ed61b59481b9"
+                        "child_count": 0
                     },
                     {
                         "field_name": "path",
@@ -383,8 +382,7 @@
                         "enabled": true,
                         "index": 3,
                         "parent": 1,
-                        "child_count": 0,
-                        "parentId": "cf369cd9-42bf-433d-bc20-ed61b59481b9"
+                        "child_count": 0
                     }
                 ],
                 "filter_columns": [
@@ -443,12 +441,13 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747323124597,
+                    "created_date_time": 1751315319356,
                     "created_by_id": 2,
-                    "modified_date_time": 1747669775393,
+                    "modified_date_time": 1751315490307,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Used in Group Dropdown when adding a new override.  Other systems should be appended to this filter.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -523,12 +522,13 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747324085396,
+                    "created_date_time": 1751315319357,
                     "created_by_id": 2,
-                    "modified_date_time": 1747331398285,
+                    "modified_date_time": 1751315568821,
                     "modified_by_id": 2,
                     "notes": "Sub filter appends to the AD filter.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -819,12 +819,1079 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747255238694,
+                    "created_date_time": 1751315319360,
                     "created_by_id": 2,
-                    "modified_date_time": 1747255288119,
+                    "modified_date_time": 1751315560426,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Used in grid showing the list of override users for the selected group.",
                     "tags": [
+                        "app_RoleGroupOverrides"
+                    ]
+                }
+            },
+            "processValue": 0
+        },
+        {
+            "name": "App_RoleGroupOverrides-Memberships",
+            "category": 3,
+            "data": {
+                "filter_name": "App_RoleGroupOverrides-Memberships",
+                "filter_name_parent": "",
+                "filter_items": [
+                    {
+                        "system_name": "internal",
+                        "col_name": "RoleGroupOverrides",
+                        "colrefname": "RoleGroupOverrides",
+                        "type": "start",
+                        "blocked": false,
+                        "id": "5829b4ff-fdab-4828-920c-f5c0513b9e76",
+                        "indent": 0,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 0,
+                        "child_count": 1
+                    },
+                    {
+                        "type": "and",
+                        "blocked": false,
+                        "id": "088fa962-abd9-4b55-9ece-e0bf3f56ebec",
+                        "indent": 1,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 1,
+                        "parent": 0,
+                        "child_count": 2
+                    },
+                    {
+                        "field_name": "GroupID",
+                        "function_name": "equals (ci)",
+                        "value_vs_parameter": false,
+                        "param_name": "GroupID",
+                        "param_expression": false,
+                        "type": "expression",
+                        "blocked": false,
+                        "id": "13dc02c9-13a8-4388-90fe-69534dd054fb",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 2,
+                        "parent": 1,
+                        "child_count": 0
+                    },
+                    {
+                        "type": "or",
+                        "blocked": false,
+                        "id": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 3,
+                        "parent": 1,
+                        "child_count": 2
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "AD",
+                        "col_name_n": "Users",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "MemberID",
+                        "field_link_n": "objectGUID",
+                        "option": "any",
+                        "colrefname": "AD_Users",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "259726d8-b173-444f-94c6-ac5a7e3adfa7",
+                        "indent": 3,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 4,
+                        "parent": 3,
+                        "child_count": 0
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "Google",
+                        "col_name_n": "users",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "MemberID",
+                        "field_link_n": "id",
+                        "option": "any",
+                        "colrefname": "G_Users",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "43a83122-370a-499e-915e-f676dd13b13a",
+                        "indent": 3,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 5,
+                        "parent": 3,
+                        "child_count": 0
+                    }
+                ],
+                "filter_columns": [
+                    {
+                        "id": "RoleGroupOverrides.ID",
+                        "order": 1,
+                        "name": "RoleGroupOverrides.ID",
+                        "display_name": "ID",
+                        "show": true,
+                        "field_name": "ID",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.GroupID",
+                        "order": 2,
+                        "name": "RoleGroupOverrides.GroupID",
+                        "display_name": "GroupID",
+                        "show": true,
+                        "field_name": "GroupID",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.MemberID",
+                        "order": 3,
+                        "name": "RoleGroupOverrides.MemberID",
+                        "display_name": "MemberID",
+                        "show": true,
+                        "field_name": "MemberID",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.ExpiresOn",
+                        "order": 4,
+                        "name": "RoleGroupOverrides.ExpiresOn",
+                        "display_name": "ExpiresOn",
+                        "show": true,
+                        "field_name": "ExpiresOn",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.Notes",
+                        "order": 5,
+                        "name": "RoleGroupOverrides.Notes",
+                        "display_name": "Notes",
+                        "show": true,
+                        "field_name": "Notes",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.objectGUID",
+                        "order": 6,
+                        "name": "AD_Users.objectGUID",
+                        "display_name": "objectGUID",
+                        "show": true,
+                        "field_name": "objectGUID",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.accountExpires",
+                        "order": 7,
+                        "name": "AD_Users.accountExpires",
+                        "display_name": "accountExpires",
+                        "show": true,
+                        "field_name": "accountExpires",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.adminDescription",
+                        "order": 8,
+                        "name": "AD_Users.adminDescription",
+                        "display_name": "adminDescription",
+                        "show": true,
+                        "field_name": "adminDescription",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.adminDisplayName",
+                        "order": 9,
+                        "name": "AD_Users.adminDisplayName",
+                        "display_name": "adminDisplayName",
+                        "show": true,
+                        "field_name": "adminDisplayName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.c",
+                        "order": 10,
+                        "name": "AD_Users.c",
+                        "display_name": "c",
+                        "show": true,
+                        "field_name": "c",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.CannotChangePassword",
+                        "order": 11,
+                        "name": "AD_Users.CannotChangePassword",
+                        "display_name": "CannotChangePassword",
+                        "show": true,
+                        "field_name": "CannotChangePassword",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.canonicalName",
+                        "order": 12,
+                        "name": "AD_Users.canonicalName",
+                        "display_name": "canonicalName",
+                        "show": true,
+                        "field_name": "canonicalName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.ChangePasswordAtLogon",
+                        "order": 13,
+                        "name": "AD_Users.ChangePasswordAtLogon",
+                        "display_name": "ChangePasswordAtLogon",
+                        "show": true,
+                        "field_name": "ChangePasswordAtLogon",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.cn",
+                        "order": 14,
+                        "name": "AD_Users.cn",
+                        "display_name": "cn",
+                        "show": true,
+                        "field_name": "cn",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.co",
+                        "order": 15,
+                        "name": "AD_Users.co",
+                        "display_name": "co",
+                        "show": true,
+                        "field_name": "co",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.company",
+                        "order": 16,
+                        "name": "AD_Users.company",
+                        "display_name": "company",
+                        "show": true,
+                        "field_name": "company",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.countryCode",
+                        "order": 17,
+                        "name": "AD_Users.countryCode",
+                        "display_name": "countryCode",
+                        "show": true,
+                        "field_name": "countryCode",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.createTimeStamp",
+                        "order": 18,
+                        "name": "AD_Users.createTimeStamp",
+                        "display_name": "createTimeStamp",
+                        "show": true,
+                        "field_name": "createTimeStamp",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.department",
+                        "order": 19,
+                        "name": "AD_Users.department",
+                        "display_name": "department",
+                        "show": true,
+                        "field_name": "department",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.description",
+                        "order": 20,
+                        "name": "AD_Users.description",
+                        "display_name": "description",
+                        "show": true,
+                        "field_name": "description",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.displayName",
+                        "order": 21,
+                        "name": "AD_Users.displayName",
+                        "display_name": "displayName",
+                        "show": true,
+                        "field_name": "displayName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.distinguishedName",
+                        "order": 22,
+                        "name": "AD_Users.distinguishedName",
+                        "display_name": "distinguishedName",
+                        "show": true,
+                        "field_name": "distinguishedName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.division",
+                        "order": 23,
+                        "name": "AD_Users.division",
+                        "display_name": "division",
+                        "show": true,
+                        "field_name": "division",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.employeeID",
+                        "order": 24,
+                        "name": "AD_Users.employeeID",
+                        "display_name": "employeeID",
+                        "show": true,
+                        "field_name": "employeeID",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.employeeNumber",
+                        "order": 25,
+                        "name": "AD_Users.employeeNumber",
+                        "display_name": "employeeNumber",
+                        "show": true,
+                        "field_name": "employeeNumber",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.employeeType",
+                        "order": 26,
+                        "name": "AD_Users.employeeType",
+                        "display_name": "employeeType",
+                        "show": true,
+                        "field_name": "employeeType",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.Enabled",
+                        "order": 27,
+                        "name": "AD_Users.Enabled",
+                        "display_name": "Enabled",
+                        "show": true,
+                        "field_name": "Enabled",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.givenName",
+                        "order": 28,
+                        "name": "AD_Users.givenName",
+                        "display_name": "givenName",
+                        "show": true,
+                        "field_name": "givenName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.homeDirectory",
+                        "order": 29,
+                        "name": "AD_Users.homeDirectory",
+                        "display_name": "homeDirectory",
+                        "show": true,
+                        "field_name": "homeDirectory",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.homeDrive",
+                        "order": 30,
+                        "name": "AD_Users.homeDrive",
+                        "display_name": "homeDrive",
+                        "show": true,
+                        "field_name": "homeDrive",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.homePhone",
+                        "order": 31,
+                        "name": "AD_Users.homePhone",
+                        "display_name": "homePhone",
+                        "show": true,
+                        "field_name": "homePhone",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.initials",
+                        "order": 32,
+                        "name": "AD_Users.initials",
+                        "display_name": "initials",
+                        "show": true,
+                        "field_name": "initials",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.info",
+                        "order": 33,
+                        "name": "AD_Users.info",
+                        "display_name": "info",
+                        "show": true,
+                        "field_name": "info",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.ipPhone",
+                        "order": 34,
+                        "name": "AD_Users.ipPhone",
+                        "display_name": "ipPhone",
+                        "show": true,
+                        "field_name": "ipPhone",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.l",
+                        "order": 35,
+                        "name": "AD_Users.l",
+                        "display_name": "l",
+                        "show": true,
+                        "field_name": "l",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.lastLogon",
+                        "order": 36,
+                        "name": "AD_Users.lastLogon",
+                        "display_name": "lastLogon",
+                        "show": true,
+                        "field_name": "lastLogon",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.mail",
+                        "order": 37,
+                        "name": "AD_Users.mail",
+                        "display_name": "mail",
+                        "show": true,
+                        "field_name": "mail",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.manager",
+                        "order": 38,
+                        "name": "AD_Users.manager",
+                        "display_name": "manager",
+                        "show": true,
+                        "field_name": "manager",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.middleName",
+                        "order": 39,
+                        "name": "AD_Users.middleName",
+                        "display_name": "middleName",
+                        "show": true,
+                        "field_name": "middleName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.mobile",
+                        "order": 40,
+                        "name": "AD_Users.mobile",
+                        "display_name": "mobile",
+                        "show": true,
+                        "field_name": "mobile",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.name",
+                        "order": 41,
+                        "name": "AD_Users.name",
+                        "display_name": "name",
+                        "show": true,
+                        "field_name": "name",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.objectClass",
+                        "order": 42,
+                        "name": "AD_Users.objectClass",
+                        "display_name": "objectClass",
+                        "show": true,
+                        "field_name": "objectClass",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.objectSid",
+                        "order": 43,
+                        "name": "AD_Users.objectSid",
+                        "display_name": "objectSid",
+                        "show": true,
+                        "field_name": "objectSid",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.pager",
+                        "order": 44,
+                        "name": "AD_Users.pager",
+                        "display_name": "pager",
+                        "show": true,
+                        "field_name": "pager",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.PasswordExpirationDate",
+                        "order": 45,
+                        "name": "AD_Users.PasswordExpirationDate",
+                        "display_name": "PasswordExpirationDate",
+                        "show": true,
+                        "field_name": "PasswordExpirationDate",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.PasswordNeverExpires",
+                        "order": 46,
+                        "name": "AD_Users.PasswordNeverExpires",
+                        "display_name": "PasswordNeverExpires",
+                        "show": true,
+                        "field_name": "PasswordNeverExpires",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.PasswordNotRequired",
+                        "order": 47,
+                        "name": "AD_Users.PasswordNotRequired",
+                        "display_name": "PasswordNotRequired",
+                        "show": true,
+                        "field_name": "PasswordNotRequired",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.path",
+                        "order": 48,
+                        "name": "AD_Users.path",
+                        "display_name": "path",
+                        "show": true,
+                        "field_name": "path",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.physicalDeliveryOfficeName",
+                        "order": 49,
+                        "name": "AD_Users.physicalDeliveryOfficeName",
+                        "display_name": "physicalDeliveryOfficeName",
+                        "show": true,
+                        "field_name": "physicalDeliveryOfficeName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.postalCode",
+                        "order": 50,
+                        "name": "AD_Users.postalCode",
+                        "display_name": "postalCode",
+                        "show": true,
+                        "field_name": "postalCode",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.postOfficeBox",
+                        "order": 51,
+                        "name": "AD_Users.postOfficeBox",
+                        "display_name": "postOfficeBox",
+                        "show": true,
+                        "field_name": "postOfficeBox",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.profilePath",
+                        "order": 52,
+                        "name": "AD_Users.profilePath",
+                        "display_name": "profilePath",
+                        "show": true,
+                        "field_name": "profilePath",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.proxyAddresses",
+                        "order": 53,
+                        "name": "AD_Users.proxyAddresses",
+                        "display_name": "proxyAddresses",
+                        "show": true,
+                        "field_name": "proxyAddresses",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.roomNumber",
+                        "order": 54,
+                        "name": "AD_Users.roomNumber",
+                        "display_name": "roomNumber",
+                        "show": true,
+                        "field_name": "roomNumber",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.sAMAccountName",
+                        "order": 55,
+                        "name": "AD_Users.sAMAccountName",
+                        "display_name": "sAMAccountName",
+                        "show": true,
+                        "field_name": "sAMAccountName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.scriptPath",
+                        "order": 56,
+                        "name": "AD_Users.scriptPath",
+                        "display_name": "scriptPath",
+                        "show": true,
+                        "field_name": "scriptPath",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.sn",
+                        "order": 57,
+                        "name": "AD_Users.sn",
+                        "display_name": "sn",
+                        "show": true,
+                        "field_name": "sn",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.st",
+                        "order": 58,
+                        "name": "AD_Users.st",
+                        "display_name": "st",
+                        "show": true,
+                        "field_name": "st",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.streetAddress",
+                        "order": 59,
+                        "name": "AD_Users.streetAddress",
+                        "display_name": "streetAddress",
+                        "show": true,
+                        "field_name": "streetAddress",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.telephoneNumber",
+                        "order": 60,
+                        "name": "AD_Users.telephoneNumber",
+                        "display_name": "telephoneNumber",
+                        "show": true,
+                        "field_name": "telephoneNumber",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.title",
+                        "order": 61,
+                        "name": "AD_Users.title",
+                        "display_name": "title",
+                        "show": true,
+                        "field_name": "title",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.userPrincipalName",
+                        "order": 62,
+                        "name": "AD_Users.userPrincipalName",
+                        "display_name": "userPrincipalName",
+                        "show": true,
+                        "field_name": "userPrincipalName",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.whenCreated",
+                        "order": 63,
+                        "name": "AD_Users.whenCreated",
+                        "display_name": "whenCreated",
+                        "show": true,
+                        "field_name": "whenCreated",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "AD_Users.wWWHomePage",
+                        "order": 64,
+                        "name": "AD_Users.wWWHomePage",
+                        "display_name": "wWWHomePage",
+                        "show": true,
+                        "field_name": "wWWHomePage",
+                        "colrefname": "AD_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.id",
+                        "order": 65,
+                        "name": "G_Users.id",
+                        "display_name": "G_Users.id",
+                        "show": true,
+                        "field_name": "id",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.primaryEmail",
+                        "order": 66,
+                        "name": "G_Users.primaryEmail",
+                        "display_name": "primaryEmail",
+                        "show": true,
+                        "field_name": "primaryEmail",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.isAdmin",
+                        "order": 67,
+                        "name": "G_Users.isAdmin",
+                        "display_name": "isAdmin",
+                        "show": true,
+                        "field_name": "isAdmin",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.suspended",
+                        "order": 68,
+                        "name": "G_Users.suspended",
+                        "display_name": "suspended",
+                        "show": true,
+                        "field_name": "suspended",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.changePasswordAtNextLogin",
+                        "order": 69,
+                        "name": "G_Users.changePasswordAtNextLogin",
+                        "display_name": "changePasswordAtNextLogin",
+                        "show": true,
+                        "field_name": "changePasswordAtNextLogin",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.fullName",
+                        "order": 70,
+                        "name": "G_Users.fullName",
+                        "display_name": "fullName",
+                        "show": true,
+                        "field_name": "fullName",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.familyName",
+                        "order": 71,
+                        "name": "G_Users.familyName",
+                        "display_name": "familyName",
+                        "show": true,
+                        "field_name": "familyName",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.givenName",
+                        "order": 72,
+                        "name": "G_Users.givenName",
+                        "display_name": "G_Users.givenName",
+                        "show": true,
+                        "field_name": "givenName",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.aliases",
+                        "order": 73,
+                        "name": "G_Users.aliases",
+                        "display_name": "aliases",
+                        "show": true,
+                        "field_name": "aliases",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.isMailboxSetup",
+                        "order": 74,
+                        "name": "G_Users.isMailboxSetup",
+                        "display_name": "isMailboxSetup",
+                        "show": true,
+                        "field_name": "isMailboxSetup",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.lastLoginTime",
+                        "order": 75,
+                        "name": "G_Users.lastLoginTime",
+                        "display_name": "lastLoginTime",
+                        "show": true,
+                        "field_name": "lastLoginTime",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.includeInGlobalAddressList",
+                        "order": 76,
+                        "name": "G_Users.includeInGlobalAddressList",
+                        "display_name": "includeInGlobalAddressList",
+                        "show": true,
+                        "field_name": "includeInGlobalAddressList",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.customSchemas_Tools4ever_ID",
+                        "order": 77,
+                        "name": "G_Users.customSchemas_Tools4ever_ID",
+                        "display_name": "customSchemas_Tools4ever_ID",
+                        "show": true,
+                        "field_name": "customSchemas_Tools4ever_ID",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.customSchemas_Tools4ever_Type",
+                        "order": 78,
+                        "name": "G_Users.customSchemas_Tools4ever_Type",
+                        "display_name": "customSchemas_Tools4ever_Type",
+                        "show": true,
+                        "field_name": "customSchemas_Tools4ever_Type",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.orgUnitPath",
+                        "order": 79,
+                        "name": "G_Users.orgUnitPath",
+                        "display_name": "orgUnitPath",
+                        "show": true,
+                        "field_name": "orgUnitPath",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.emails",
+                        "order": 80,
+                        "name": "G_Users.emails",
+                        "display_name": "emails",
+                        "show": true,
+                        "field_name": "emails",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.externalIds",
+                        "order": 81,
+                        "name": "G_Users.externalIds",
+                        "display_name": "externalIds",
+                        "show": true,
+                        "field_name": "externalIds",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.organizations",
+                        "order": 82,
+                        "name": "G_Users.organizations",
+                        "display_name": "organizations",
+                        "show": true,
+                        "field_name": "organizations",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.phones",
+                        "order": 83,
+                        "name": "G_Users.phones",
+                        "display_name": "phones",
+                        "show": true,
+                        "field_name": "phones",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "G_Users.relations",
+                        "order": 84,
+                        "name": "G_Users.relations",
+                        "display_name": "relations",
+                        "show": true,
+                        "field_name": "relations",
+                        "colrefname": "G_Users",
+                        "nullable": false,
+                        "source": "data"
+                    }
+                ],
+                "sort_columns": [
+                ],
+                "group": {
+                    "enabled": false,
+                    "count": 1,
+                    "field": ""
+                },
+                "params": [
+                    {
+                        "param_name": "GroupID",
+                        "param_category": "input",
+                        "data_type": "string",
+                        "default_value": "",
+                        "description": "",
+                        "variable_name": ""
+                    }
+                ],
+                "appends": [
+                ],
+                "exclude": {
+                    "enabled": false,
+                    "field_name": "",
+                    "exclude_after_oas": false
+                },
+                "lookups": [
+                ],
+                "meta_config": {
+                    "created_date_time": 1751315319362,
+                    "created_by_id": 2,
+                    "modified_date_time": 1751315760743,
+                    "modified_by_id": 2,
+                    "notes": "Membership filter used by Role Model.",
+                    "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -859,8 +1926,7 @@
                         "enabled": true,
                         "index": 1,
                         "parent": 0,
-                        "child_count": 4,
-                        "parentId": "488c01e3-f983-48a0-b8b1-7edce6b58ab7"
+                        "child_count": 4
                     },
                     {
                         "ref_type": "n-n",
@@ -881,8 +1947,7 @@
                         "enabled": true,
                         "index": 2,
                         "parent": 1,
-                        "child_count": 1,
-                        "parentId": "9829edba-0cc3-4dc0-820a-cc9d3f575d36"
+                        "child_count": 1
                     },
                     {
                         "field_name": "GroupID",
@@ -898,8 +1963,7 @@
                         "enabled": true,
                         "index": 3,
                         "parent": 2,
-                        "child_count": 0,
-                        "parentId": "a6394955-9df2-4901-9b2e-bcd8661d06ba"
+                        "child_count": 0
                     },
                     {
                         "field_name": "System",
@@ -916,8 +1980,7 @@
                         "enabled": true,
                         "index": 4,
                         "parent": 1,
-                        "child_count": 0,
-                        "parentId": "9829edba-0cc3-4dc0-820a-cc9d3f575d36"
+                        "child_count": 0
                     },
                     {
                         "field_name": "Enabled",
@@ -934,8 +1997,7 @@
                         "enabled": true,
                         "index": 5,
                         "parent": 1,
-                        "child_count": 0,
-                        "parentId": "9829edba-0cc3-4dc0-820a-cc9d3f575d36"
+                        "child_count": 0
                     },
                     {
                         "field_name": "employeeType",
@@ -951,8 +2013,7 @@
                         "enabled": true,
                         "index": 6,
                         "parent": 1,
-                        "child_count": 0,
-                        "parentId": "9829edba-0cc3-4dc0-820a-cc9d3f575d36"
+                        "child_count": 0
                     }
                 ],
                 "filter_columns": [
@@ -1054,12 +2115,13 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747327756679,
+                    "created_date_time": 1751315319367,
                     "created_by_id": 2,
-                    "modified_date_time": 1747670054790,
+                    "modified_date_time": 1751315623616,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Lists available users that do not have an override for the selected group.  Other systems users should be appended to this filter.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -1281,1332 +2343,13 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747331529732,
+                    "created_date_time": 1751315319369,
                     "created_by_id": 2,
-                    "modified_date_time": 1747670006932,
+                    "modified_date_time": 1751315640304,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Sub filter appends to the MembersPending-AD filter.",
                     "tags": [
-                    ]
-                }
-            },
-            "processValue": 0
-        },
-        {
-            "name": "App_RoleGroupOverrides-Memberships",
-            "category": 3,
-            "data": {
-                "filter_name": "App_RoleGroupOverrides-Memberships",
-                "filter_name_parent": "",
-                "filter_items": [
-                    {
-                        "system_name": "internal",
-                        "col_name": "RoleGroupOverrides",
-                        "colrefname": "RoleGroupOverrides",
-                        "type": "start",
-                        "blocked": false,
-                        "indent": 0,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 0,
-                        "child_count": 1,
-                        "id": "5829b4ff-fdab-4828-920c-f5c0513b9e76"
-                    },
-                    {
-                        "type": "and",
-                        "blocked": false,
-                        "id": "088fa962-abd9-4b55-9ece-e0bf3f56ebec",
-                        "indent": 1,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 1,
-                        "parent": 0,
-                        "child_count": 2
-                    },
-                    {
-                        "field_name": "GroupID",
-                        "function_name": "equals (ci)",
-                        "value_vs_parameter": false,
-                        "param_name": "GroupID",
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "13dc02c9-13a8-4388-90fe-69534dd054fb",
-                        "indent": 2,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 2,
-                        "parent": 1,
-                        "child_count": 0
-                    },
-                    {
-                        "type": "or",
-                        "blocked": false,
-                        "id": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064",
-                        "indent": 2,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 3,
-                        "parent": 1,
-                        "child_count": 2
-                    },
-                    {
-                        "ref_type": "n-n",
-                        "system_name_n": "AD",
-                        "col_name_n": "Users",
-                        "system_name_link": "intersystem",
-                        "col_name_link": "intercol",
-                        "field_link_m": "MemberID",
-                        "field_link_n": "objectGUID",
-                        "option": "any",
-                        "colrefname": "AD_Users",
-                        "recursive": false,
-                        "type": "reference",
-                        "blocked": false,
-                        "id": "259726d8-b173-444f-94c6-ac5a7e3adfa7",
-                        "indent": 3,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 4,
-                        "parent": 3,
-                        "child_count": 0
-                    },
-                    {
-                        "ref_type": "n-n",
-                        "system_name_n": "Google",
-                        "col_name_n": "users",
-                        "system_name_link": "intersystem",
-                        "col_name_link": "intercol",
-                        "field_link_m": "MemberID",
-                        "field_link_n": "id",
-                        "option": "any",
-                        "colrefname": "G_Users",
-                        "recursive": false,
-                        "type": "reference",
-                        "blocked": false,
-                        "id": "43a83122-370a-499e-915e-f676dd13b13a",
-                        "indent": 3,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 5,
-                        "parent": 3,
-                        "child_count": 0
-                    }
-                ],
-                "filter_columns": [
-                    {
-                        "id": "RoleGroupOverrides.ID",
-                        "order": 1,
-                        "name": "RoleGroupOverrides.ID",
-                        "display_name": "ID",
-                        "show": true,
-                        "field_name": "ID",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.GroupID",
-                        "order": 2,
-                        "name": "RoleGroupOverrides.GroupID",
-                        "display_name": "GroupID",
-                        "show": true,
-                        "field_name": "GroupID",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.MemberID",
-                        "order": 3,
-                        "name": "RoleGroupOverrides.MemberID",
-                        "display_name": "MemberID",
-                        "show": true,
-                        "field_name": "MemberID",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.ExpiresOn",
-                        "order": 4,
-                        "name": "RoleGroupOverrides.ExpiresOn",
-                        "display_name": "ExpiresOn",
-                        "show": true,
-                        "field_name": "ExpiresOn",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.Notes",
-                        "order": 5,
-                        "name": "RoleGroupOverrides.Notes",
-                        "display_name": "Notes",
-                        "show": true,
-                        "field_name": "Notes",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.cs_Google_Relation",
-                        "order": 6,
-                        "name": "AD_Users.cs_Google_Relation",
-                        "display_name": "cs_Google_Relation",
-                        "show": true,
-                        "field_name": "cs_Google_Relation",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.cs_System",
-                        "order": 7,
-                        "name": "AD_Users.cs_System",
-                        "display_name": "cs_System",
-                        "show": true,
-                        "field_name": "cs_System",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.objectGUID",
-                        "order": 8,
-                        "name": "AD_Users.objectGUID",
-                        "display_name": "objectGUID",
-                        "show": true,
-                        "field_name": "objectGUID",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.accountExpires",
-                        "order": 9,
-                        "name": "AD_Users.accountExpires",
-                        "display_name": "accountExpires",
-                        "show": true,
-                        "field_name": "accountExpires",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.adminDescription",
-                        "order": 10,
-                        "name": "AD_Users.adminDescription",
-                        "display_name": "adminDescription",
-                        "show": true,
-                        "field_name": "adminDescription",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.adminDisplayName",
-                        "order": 11,
-                        "name": "AD_Users.adminDisplayName",
-                        "display_name": "adminDisplayName",
-                        "show": true,
-                        "field_name": "adminDisplayName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.c",
-                        "order": 12,
-                        "name": "AD_Users.c",
-                        "display_name": "c",
-                        "show": true,
-                        "field_name": "c",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.CannotChangePassword",
-                        "order": 13,
-                        "name": "AD_Users.CannotChangePassword",
-                        "display_name": "CannotChangePassword",
-                        "show": true,
-                        "field_name": "CannotChangePassword",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.canonicalName",
-                        "order": 14,
-                        "name": "AD_Users.canonicalName",
-                        "display_name": "canonicalName",
-                        "show": true,
-                        "field_name": "canonicalName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.ChangePasswordAtLogon",
-                        "order": 15,
-                        "name": "AD_Users.ChangePasswordAtLogon",
-                        "display_name": "ChangePasswordAtLogon",
-                        "show": true,
-                        "field_name": "ChangePasswordAtLogon",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.cn",
-                        "order": 16,
-                        "name": "AD_Users.cn",
-                        "display_name": "cn",
-                        "show": true,
-                        "field_name": "cn",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.co",
-                        "order": 17,
-                        "name": "AD_Users.co",
-                        "display_name": "co",
-                        "show": true,
-                        "field_name": "co",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.company",
-                        "order": 18,
-                        "name": "AD_Users.company",
-                        "display_name": "company",
-                        "show": true,
-                        "field_name": "company",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.countryCode",
-                        "order": 19,
-                        "name": "AD_Users.countryCode",
-                        "display_name": "countryCode",
-                        "show": true,
-                        "field_name": "countryCode",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.createTimeStamp",
-                        "order": 20,
-                        "name": "AD_Users.createTimeStamp",
-                        "display_name": "createTimeStamp",
-                        "show": true,
-                        "field_name": "createTimeStamp",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.department",
-                        "order": 21,
-                        "name": "AD_Users.department",
-                        "display_name": "department",
-                        "show": true,
-                        "field_name": "department",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.description",
-                        "order": 22,
-                        "name": "AD_Users.description",
-                        "display_name": "description",
-                        "show": true,
-                        "field_name": "description",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.displayName",
-                        "order": 23,
-                        "name": "AD_Users.displayName",
-                        "display_name": "displayName",
-                        "show": true,
-                        "field_name": "displayName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.distinguishedName",
-                        "order": 24,
-                        "name": "AD_Users.distinguishedName",
-                        "display_name": "distinguishedName",
-                        "show": true,
-                        "field_name": "distinguishedName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.division",
-                        "order": 25,
-                        "name": "AD_Users.division",
-                        "display_name": "division",
-                        "show": true,
-                        "field_name": "division",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.employeeID",
-                        "order": 26,
-                        "name": "AD_Users.employeeID",
-                        "display_name": "employeeID",
-                        "show": true,
-                        "field_name": "employeeID",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.employeeNumber",
-                        "order": 27,
-                        "name": "AD_Users.employeeNumber",
-                        "display_name": "employeeNumber",
-                        "show": true,
-                        "field_name": "employeeNumber",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.employeeType",
-                        "order": 28,
-                        "name": "AD_Users.employeeType",
-                        "display_name": "employeeType",
-                        "show": true,
-                        "field_name": "employeeType",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.Enabled",
-                        "order": 29,
-                        "name": "AD_Users.Enabled",
-                        "display_name": "Enabled",
-                        "show": true,
-                        "field_name": "Enabled",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.facsimileTelephoneNumber",
-                        "order": 30,
-                        "name": "AD_Users.facsimileTelephoneNumber",
-                        "display_name": "facsimileTelephoneNumber",
-                        "show": true,
-                        "field_name": "facsimileTelephoneNumber",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.givenName",
-                        "order": 31,
-                        "name": "AD_Users.givenName",
-                        "display_name": "givenName",
-                        "show": true,
-                        "field_name": "givenName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.homeDirectory",
-                        "order": 32,
-                        "name": "AD_Users.homeDirectory",
-                        "display_name": "homeDirectory",
-                        "show": true,
-                        "field_name": "homeDirectory",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.homeDrive",
-                        "order": 33,
-                        "name": "AD_Users.homeDrive",
-                        "display_name": "homeDrive",
-                        "show": true,
-                        "field_name": "homeDrive",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.homePhone",
-                        "order": 34,
-                        "name": "AD_Users.homePhone",
-                        "display_name": "homePhone",
-                        "show": true,
-                        "field_name": "homePhone",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.initials",
-                        "order": 35,
-                        "name": "AD_Users.initials",
-                        "display_name": "initials",
-                        "show": true,
-                        "field_name": "initials",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.info",
-                        "order": 36,
-                        "name": "AD_Users.info",
-                        "display_name": "info",
-                        "show": true,
-                        "field_name": "info",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.ipPhone",
-                        "order": 37,
-                        "name": "AD_Users.ipPhone",
-                        "display_name": "ipPhone",
-                        "show": true,
-                        "field_name": "ipPhone",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.l",
-                        "order": 38,
-                        "name": "AD_Users.l",
-                        "display_name": "l",
-                        "show": true,
-                        "field_name": "l",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.lastLogon",
-                        "order": 39,
-                        "name": "AD_Users.lastLogon",
-                        "display_name": "lastLogon",
-                        "show": true,
-                        "field_name": "lastLogon",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.lockoutTime",
-                        "order": 40,
-                        "name": "AD_Users.lockoutTime",
-                        "display_name": "lockoutTime",
-                        "show": true,
-                        "field_name": "lockoutTime",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.mail",
-                        "order": 41,
-                        "name": "AD_Users.mail",
-                        "display_name": "mail",
-                        "show": true,
-                        "field_name": "mail",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.manager",
-                        "order": 42,
-                        "name": "AD_Users.manager",
-                        "display_name": "manager",
-                        "show": true,
-                        "field_name": "manager",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.middleName",
-                        "order": 43,
-                        "name": "AD_Users.middleName",
-                        "display_name": "middleName",
-                        "show": true,
-                        "field_name": "middleName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.mobile",
-                        "order": 44,
-                        "name": "AD_Users.mobile",
-                        "display_name": "mobile",
-                        "show": true,
-                        "field_name": "mobile",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.msExchHideFromAddressLists",
-                        "order": 45,
-                        "name": "AD_Users.msExchHideFromAddressLists",
-                        "display_name": "msExchHideFromAddressLists",
-                        "show": true,
-                        "field_name": "msExchHideFromAddressLists",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.name",
-                        "order": 46,
-                        "name": "AD_Users.name",
-                        "display_name": "name",
-                        "show": true,
-                        "field_name": "name",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.objectClass",
-                        "order": 47,
-                        "name": "AD_Users.objectClass",
-                        "display_name": "objectClass",
-                        "show": true,
-                        "field_name": "objectClass",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.objectSid",
-                        "order": 48,
-                        "name": "AD_Users.objectSid",
-                        "display_name": "objectSid",
-                        "show": true,
-                        "field_name": "objectSid",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.pager",
-                        "order": 49,
-                        "name": "AD_Users.pager",
-                        "display_name": "pager",
-                        "show": true,
-                        "field_name": "pager",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.PasswordExpirationDate",
-                        "order": 50,
-                        "name": "AD_Users.PasswordExpirationDate",
-                        "display_name": "PasswordExpirationDate",
-                        "show": true,
-                        "field_name": "PasswordExpirationDate",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.PasswordNeverExpires",
-                        "order": 51,
-                        "name": "AD_Users.PasswordNeverExpires",
-                        "display_name": "PasswordNeverExpires",
-                        "show": true,
-                        "field_name": "PasswordNeverExpires",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.PasswordNotRequired",
-                        "order": 52,
-                        "name": "AD_Users.PasswordNotRequired",
-                        "display_name": "PasswordNotRequired",
-                        "show": true,
-                        "field_name": "PasswordNotRequired",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.path",
-                        "order": 53,
-                        "name": "AD_Users.path",
-                        "display_name": "path",
-                        "show": true,
-                        "field_name": "path",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.physicalDeliveryOfficeName",
-                        "order": 54,
-                        "name": "AD_Users.physicalDeliveryOfficeName",
-                        "display_name": "physicalDeliveryOfficeName",
-                        "show": true,
-                        "field_name": "physicalDeliveryOfficeName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.postalCode",
-                        "order": 55,
-                        "name": "AD_Users.postalCode",
-                        "display_name": "postalCode",
-                        "show": true,
-                        "field_name": "postalCode",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.postOfficeBox",
-                        "order": 56,
-                        "name": "AD_Users.postOfficeBox",
-                        "display_name": "postOfficeBox",
-                        "show": true,
-                        "field_name": "postOfficeBox",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.profilePath",
-                        "order": 57,
-                        "name": "AD_Users.profilePath",
-                        "display_name": "profilePath",
-                        "show": true,
-                        "field_name": "profilePath",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.proxyAddresses",
-                        "order": 58,
-                        "name": "AD_Users.proxyAddresses",
-                        "display_name": "proxyAddresses",
-                        "show": true,
-                        "field_name": "proxyAddresses",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.roomNumber",
-                        "order": 59,
-                        "name": "AD_Users.roomNumber",
-                        "display_name": "roomNumber",
-                        "show": true,
-                        "field_name": "roomNumber",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.sAMAccountName",
-                        "order": 60,
-                        "name": "AD_Users.sAMAccountName",
-                        "display_name": "sAMAccountName",
-                        "show": true,
-                        "field_name": "sAMAccountName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.scriptPath",
-                        "order": 61,
-                        "name": "AD_Users.scriptPath",
-                        "display_name": "scriptPath",
-                        "show": true,
-                        "field_name": "scriptPath",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.sn",
-                        "order": 62,
-                        "name": "AD_Users.sn",
-                        "display_name": "sn",
-                        "show": true,
-                        "field_name": "sn",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.st",
-                        "order": 63,
-                        "name": "AD_Users.st",
-                        "display_name": "st",
-                        "show": true,
-                        "field_name": "st",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.streetAddress",
-                        "order": 64,
-                        "name": "AD_Users.streetAddress",
-                        "display_name": "streetAddress",
-                        "show": true,
-                        "field_name": "streetAddress",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.telephoneNumber",
-                        "order": 65,
-                        "name": "AD_Users.telephoneNumber",
-                        "display_name": "telephoneNumber",
-                        "show": true,
-                        "field_name": "telephoneNumber",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.title",
-                        "order": 66,
-                        "name": "AD_Users.title",
-                        "display_name": "title",
-                        "show": true,
-                        "field_name": "title",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.userPrincipalName",
-                        "order": 67,
-                        "name": "AD_Users.userPrincipalName",
-                        "display_name": "userPrincipalName",
-                        "show": true,
-                        "field_name": "userPrincipalName",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.whenChanged",
-                        "order": 68,
-                        "name": "AD_Users.whenChanged",
-                        "display_name": "whenChanged",
-                        "show": true,
-                        "field_name": "whenChanged",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.whenCreated",
-                        "order": 69,
-                        "name": "AD_Users.whenCreated",
-                        "display_name": "whenCreated",
-                        "show": true,
-                        "field_name": "whenCreated",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "AD_Users.wWWHomePage",
-                        "order": 70,
-                        "name": "AD_Users.wWWHomePage",
-                        "display_name": "wWWHomePage",
-                        "show": true,
-                        "field_name": "wWWHomePage",
-                        "colrefname": "AD_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.cs_System",
-                        "order": 71,
-                        "name": "G_Users.cs_System",
-                        "display_name": "G_Users.cs_System",
-                        "show": true,
-                        "field_name": "cs_System",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.id",
-                        "order": 72,
-                        "name": "G_Users.id",
-                        "display_name": "G_Users.id",
-                        "show": true,
-                        "field_name": "id",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.primaryEmail",
-                        "order": 73,
-                        "name": "G_Users.primaryEmail",
-                        "display_name": "primaryEmail",
-                        "show": true,
-                        "field_name": "primaryEmail",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.creationTime",
-                        "order": 74,
-                        "name": "G_Users.creationTime",
-                        "display_name": "creationTime",
-                        "show": true,
-                        "field_name": "creationTime",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.isAdmin",
-                        "order": 75,
-                        "name": "G_Users.isAdmin",
-                        "display_name": "isAdmin",
-                        "show": true,
-                        "field_name": "isAdmin",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.suspended",
-                        "order": 76,
-                        "name": "G_Users.suspended",
-                        "display_name": "suspended",
-                        "show": true,
-                        "field_name": "suspended",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.changePasswordAtNextLogin",
-                        "order": 77,
-                        "name": "G_Users.changePasswordAtNextLogin",
-                        "display_name": "changePasswordAtNextLogin",
-                        "show": true,
-                        "field_name": "changePasswordAtNextLogin",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.fullName",
-                        "order": 78,
-                        "name": "G_Users.fullName",
-                        "display_name": "fullName",
-                        "show": true,
-                        "field_name": "fullName",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.familyName",
-                        "order": 79,
-                        "name": "G_Users.familyName",
-                        "display_name": "familyName",
-                        "show": true,
-                        "field_name": "familyName",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.givenName",
-                        "order": 80,
-                        "name": "G_Users.givenName",
-                        "display_name": "G_Users.givenName",
-                        "show": true,
-                        "field_name": "givenName",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.aliases",
-                        "order": 81,
-                        "name": "G_Users.aliases",
-                        "display_name": "aliases",
-                        "show": true,
-                        "field_name": "aliases",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.isMailboxSetup",
-                        "order": 82,
-                        "name": "G_Users.isMailboxSetup",
-                        "display_name": "isMailboxSetup",
-                        "show": true,
-                        "field_name": "isMailboxSetup",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.lastLoginTime",
-                        "order": 83,
-                        "name": "G_Users.lastLoginTime",
-                        "display_name": "lastLoginTime",
-                        "show": true,
-                        "field_name": "lastLoginTime",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.includeInGlobalAddressList",
-                        "order": 84,
-                        "name": "G_Users.includeInGlobalAddressList",
-                        "display_name": "includeInGlobalAddressList",
-                        "show": true,
-                        "field_name": "includeInGlobalAddressList",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.customSchemas_Tools4ever_ID",
-                        "order": 85,
-                        "name": "G_Users.customSchemas_Tools4ever_ID",
-                        "display_name": "customSchemas_Tools4ever_ID",
-                        "show": true,
-                        "field_name": "customSchemas_Tools4ever_ID",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.customSchemas_Tools4ever_Type",
-                        "order": 86,
-                        "name": "G_Users.customSchemas_Tools4ever_Type",
-                        "display_name": "customSchemas_Tools4ever_Type",
-                        "show": true,
-                        "field_name": "customSchemas_Tools4ever_Type",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.customSchemas_Tools4ever_DisabledOn",
-                        "order": 87,
-                        "name": "G_Users.customSchemas_Tools4ever_DisabledOn",
-                        "display_name": "customSchemas_Tools4ever_DisabledOn",
-                        "show": true,
-                        "field_name": "customSchemas_Tools4ever_DisabledOn",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.orgUnitPath",
-                        "order": 88,
-                        "name": "G_Users.orgUnitPath",
-                        "display_name": "orgUnitPath",
-                        "show": true,
-                        "field_name": "orgUnitPath",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.emails",
-                        "order": 89,
-                        "name": "G_Users.emails",
-                        "display_name": "emails",
-                        "show": true,
-                        "field_name": "emails",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.externalIds",
-                        "order": 90,
-                        "name": "G_Users.externalIds",
-                        "display_name": "externalIds",
-                        "show": true,
-                        "field_name": "externalIds",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.organizations",
-                        "order": 91,
-                        "name": "G_Users.organizations",
-                        "display_name": "organizations",
-                        "show": true,
-                        "field_name": "organizations",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.phones",
-                        "order": 92,
-                        "name": "G_Users.phones",
-                        "display_name": "phones",
-                        "show": true,
-                        "field_name": "phones",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "G_Users.relations",
-                        "order": 93,
-                        "name": "G_Users.relations",
-                        "display_name": "relations",
-                        "show": true,
-                        "field_name": "relations",
-                        "colrefname": "G_Users",
-                        "nullable": false,
-                        "source": "data"
-                    }
-                ],
-                "sort_columns": [
-                ],
-                "group": {
-                    "enabled": false,
-                    "count": 1,
-                    "field": ""
-                },
-                "params": [
-                    {
-                        "param_name": "GroupID",
-                        "param_category": "input",
-                        "data_type": "string",
-                        "default_value": "",
-                        "description": "",
-                        "variable_name": ""
-                    }
-                ],
-                "appends": [
-                ],
-                "exclude": {
-                    "enabled": false,
-                    "field_name": "",
-                    "exclude_after_oas": false
-                },
-                "lookups": [
-                ],
-                "meta_config": {
-                    "created_date_time": 1747664304523,
-                    "created_by_id": 2,
-                    "modified_date_time": 1747664450944,
-                    "modified_by_id": 2,
-                    "notes": "",
-                    "tags": [
-                    ]
-                }
-            },
-            "processValue": 0
-        },
-        {
-            "name": "App_RoleGroupOverrides-RoleGen",
-            "category": 3,
-            "data": {
-                "filter_name": "App_RoleGroupOverrides-RoleGen",
-                "filter_name_parent": "",
-                "filter_items": [
-                    {
-                        "system_name": "internal",
-                        "col_name": "RoleGroupOverrides",
-                        "colrefname": "RoleGroupOverrides",
-                        "type": "start",
-                        "blocked": false,
-                        "id": "9301ba3b-7e3e-4d9c-ba07-64ceaa61acd6",
-                        "indent": 0,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 0,
-                        "child_count": 1
-                    },
-                    {
-                        "type": "or",
-                        "blocked": false,
-                        "id": "00f2d3b8-46bb-40d1-abd7-e3221cf3c58a",
-                        "indent": 1,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 1,
-                        "parent": 0,
-                        "child_count": 2,
-                        "parentId": "9301ba3b-7e3e-4d9c-ba07-64ceaa61acd6"
-                    },
-                    {
-                        "ref_type": "n-n",
-                        "system_name_n": "Google",
-                        "col_name_n": "groups",
-                        "system_name_link": "intersystem",
-                        "col_name_link": "intercol",
-                        "field_link_m": "GroupID",
-                        "field_link_n": "id",
-                        "option": "any",
-                        "colrefname": "G_Groups",
-                        "recursive": false,
-                        "type": "reference",
-                        "blocked": false,
-                        "id": "1b137e74-1679-4114-b2a8-843ee1585482",
-                        "indent": 2,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 2,
-                        "parent": 1,
-                        "child_count": 0,
-                        "parentId": "00f2d3b8-46bb-40d1-abd7-e3221cf3c58a"
-                    },
-                    {
-                        "ref_type": "n-n",
-                        "system_name_n": "AD",
-                        "col_name_n": "Groups",
-                        "system_name_link": "intersystem",
-                        "col_name_link": "intercol",
-                        "field_link_m": "GroupID",
-                        "field_link_n": "objectGUID",
-                        "option": "any",
-                        "colrefname": "AD_Groups",
-                        "recursive": false,
-                        "type": "reference",
-                        "blocked": false,
-                        "id": "672f494d-c094-4609-bc87-df4871ede5f2",
-                        "indent": 2,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 3,
-                        "parent": 1,
-                        "child_count": 0,
-                        "parentId": "00f2d3b8-46bb-40d1-abd7-e3221cf3c58a"
-                    }
-                ],
-                "filter_columns": [
-                    {
-                        "id": "cf_RoleName",
-                        "order": 1,
-                        "name": "cf_RoleName",
-                        "display_name": "cf_RoleName",
-                        "show": true,
-                        "javascript": "let groupName = data['AD_Groups'] && data['AD_Groups']['cn'] ? 'AD_' + data['AD_Groups']['cn'] : 'Google_' + data['G_Groups']['name'];\ngroupName = groupName.replace(/\\W/g,'_');\nreturn 'RoleGroupOverride-' + groupName;",
-                        "source": "script"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.GroupID",
-                        "order": 2,
-                        "name": "RoleGroupOverrides.GroupID",
-                        "display_name": "GroupID",
-                        "show": true,
-                        "field_name": "GroupID",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    },
-                    {
-                        "id": "RoleGroupOverrides.ExpiresOn",
-                        "order": 3,
-                        "name": "RoleGroupOverrides.ExpiresOn",
-                        "display_name": "ExpiresOn",
-                        "show": true,
-                        "field_name": "ExpiresOn",
-                        "colrefname": "RoleGroupOverrides",
-                        "nullable": false,
-                        "source": "data"
-                    }
-                ],
-                "sort_columns": [
-                ],
-                "group": {
-                    "enabled": true,
-                    "count": 1,
-                    "field": "cf_RoleName"
-                },
-                "params": [
-                ],
-                "appends": [
-                ],
-                "exclude": {
-                    "enabled": false,
-                    "field_name": "",
-                    "exclude_after_oas": false
-                },
-                "lookups": [
-                    {
-                        "lookupName": "AD_Group",
-                        "filterColumnName": "RoleGroupOverrides.GroupID",
-                        "systemName": "AD",
-                        "colName": "Groups",
-                        "fieldName": "objectGUID",
-                        "includeVsExclude": true
-                    },
-                    {
-                        "lookupName": "Google_Group",
-                        "filterColumnName": "RoleGroupOverrides.GroupID",
-                        "systemName": "Google",
-                        "colName": "groups",
-                        "fieldName": "id",
-                        "includeVsExclude": true
-                    }
-                ],
-                "meta_config": {
-                    "created_date_time": 1747664171533,
-                    "created_by_id": 2,
-                    "modified_date_time": 1747664984431,
-                    "modified_by_id": 2,
-                    "notes": "",
-                    "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -2725,12 +2468,167 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747674885004,
+                    "created_date_time": 1751315319371,
                     "created_by_id": 2,
-                    "modified_date_time": 1747674946365,
+                    "modified_date_time": 1751315782601,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Mapping filter used to remove expired overrides.",
                     "tags": [
+                        "app_RoleGroupOverrides"
+                    ]
+                }
+            },
+            "processValue": 0
+        },
+        {
+            "name": "App_RoleGroupOverrides-RoleGen",
+            "category": 3,
+            "data": {
+                "filter_name": "App_RoleGroupOverrides-RoleGen",
+                "filter_name_parent": "",
+                "filter_items": [
+                    {
+                        "system_name": "internal",
+                        "col_name": "RoleGroupOverrides",
+                        "colrefname": "RoleGroupOverrides",
+                        "type": "start",
+                        "blocked": false,
+                        "id": "9301ba3b-7e3e-4d9c-ba07-64ceaa61acd6",
+                        "indent": 0,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 0,
+                        "child_count": 1
+                    },
+                    {
+                        "type": "or",
+                        "blocked": false,
+                        "id": "00f2d3b8-46bb-40d1-abd7-e3221cf3c58a",
+                        "indent": 1,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 1,
+                        "parent": 0,
+                        "child_count": 2
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "Google",
+                        "col_name_n": "groups",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "GroupID",
+                        "field_link_n": "id",
+                        "option": "any",
+                        "colrefname": "G_Groups",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "1b137e74-1679-4114-b2a8-843ee1585482",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 2,
+                        "parent": 1,
+                        "child_count": 0
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "AD",
+                        "col_name_n": "Groups",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "GroupID",
+                        "field_link_n": "objectGUID",
+                        "option": "any",
+                        "colrefname": "AD_Groups",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "672f494d-c094-4609-bc87-df4871ede5f2",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 3,
+                        "parent": 1,
+                        "child_count": 0
+                    }
+                ],
+                "filter_columns": [
+                    {
+                        "id": "cf_RoleName",
+                        "order": 1,
+                        "name": "cf_RoleName",
+                        "display_name": "cf_RoleName",
+                        "show": true,
+                        "javascript": "let groupName = data['AD_Groups'] && data['AD_Groups']['cn'] ? 'AD_' + data['AD_Groups']['cn'] : 'Google_' + data['G_Groups']['name'];\ngroupName = groupName.replace(/\\W/g,'_');\nreturn 'RoleGroupOverride-' + groupName;",
+                        "source": "script"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.GroupID",
+                        "order": 2,
+                        "name": "RoleGroupOverrides.GroupID",
+                        "display_name": "GroupID",
+                        "show": true,
+                        "field_name": "GroupID",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    },
+                    {
+                        "id": "RoleGroupOverrides.ExpiresOn",
+                        "order": 3,
+                        "name": "RoleGroupOverrides.ExpiresOn",
+                        "display_name": "ExpiresOn",
+                        "show": true,
+                        "field_name": "ExpiresOn",
+                        "colrefname": "RoleGroupOverrides",
+                        "nullable": false,
+                        "source": "data"
+                    }
+                ],
+                "sort_columns": [
+                ],
+                "group": {
+                    "enabled": true,
+                    "count": 1,
+                    "field": "cf_RoleName"
+                },
+                "params": [
+                ],
+                "appends": [
+                ],
+                "exclude": {
+                    "enabled": false,
+                    "field_name": "",
+                    "exclude_after_oas": false
+                },
+                "lookups": [
+                    {
+                        "lookupName": "AD_Group",
+                        "filterColumnName": "RoleGroupOverrides.GroupID",
+                        "systemName": "AD",
+                        "colName": "Groups",
+                        "fieldName": "objectGUID",
+                        "includeVsExclude": true
+                    },
+                    {
+                        "lookupName": "Google_Group",
+                        "filterColumnName": "RoleGroupOverrides.GroupID",
+                        "systemName": "Google",
+                        "colName": "groups",
+                        "fieldName": "id",
+                        "includeVsExclude": true
+                    }
+                ],
+                "meta_config": {
+                    "created_date_time": 1751315319372,
+                    "created_by_id": 2,
+                    "modified_date_time": 1751315820154,
+                    "modified_by_id": 2,
+                    "notes": "Role Generator filter used to create roles for overridden groups.",
+                    "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -2771,12 +2669,13 @@
                 ],
                 "nimOnlyKey": false,
                 "meta_config": {
-                    "created_date_time": 1747674996828,
+                    "created_date_time": 1751315319375,
                     "created_by_id": 2,
-                    "modified_date_time": 0,
-                    "modified_by_id": -1,
-                    "notes": "",
+                    "modified_date_time": 1751315904461,
+                    "modified_by_id": 2,
+                    "notes": "Remove expired overrides.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 }
             },
@@ -2828,12 +2727,13 @@
             "data": {
                 "jobdef_name": "Internal_RoleGroupOverrides_DeleteExpired",
                 "meta_config": {
-                    "created_date_time": 1747675030738,
+                    "created_date_time": 1751315319381,
                     "created_by_id": 2,
-                    "modified_date_time": 1747675098012,
+                    "modified_date_time": 1751315935020,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Remove expired overrides.",
                     "tags": [
+                        "app_RoleGroupOverrides"
                     ]
                 },
                 "tasks": [
@@ -2844,6 +2744,86 @@
                         "threshold": 100
                     }
                 ]
+            },
+            "processValue": 0
+        },
+        {
+            "name": "App_RoleGroupOverrides_DeleteExpired",
+            "category": 10,
+            "data": {
+                "type": "sync",
+                "name": "App_RoleGroupOverrides_DeleteExpired",
+                "enabled": true,
+                "schedule": {
+                    "second": {
+                        "mode": 1,
+                        "at": 0,
+                        "n": 1,
+                        "list": [
+                        ]
+                    },
+                    "minute": {
+                        "mode": 1,
+                        "at": 15,
+                        "n": 1,
+                        "list": [
+                        ]
+                    },
+                    "hour": {
+                        "mode": 1,
+                        "at": 3,
+                        "n": 1,
+                        "list": [
+                        ]
+                    },
+                    "day_month": {
+                        "mode": 0,
+                        "at": 0,
+                        "n": 1,
+                        "list": [
+                        ]
+                    },
+                    "month": {
+                        "mode": 0,
+                        "at": 0,
+                        "n": 1,
+                        "list": [
+                        ]
+                    },
+                    "day_week": {
+                        "mode": 0,
+                        "at": 0,
+                        "n": 1,
+                        "list": [
+                        ]
+                    }
+                },
+                "meta_config": {
+                    "created_date_time": 1751315319382,
+                    "created_by_id": 2,
+                    "modified_date_time": 1751316009724,
+                    "modified_by_id": 2,
+                    "notes": "Remove expired overrides.",
+                    "tags": [
+                        "app_RoleGroupoOverrides"
+                    ]
+                },
+                "config": {
+                    "collect_enabled": false,
+                    "eval_enabled": false,
+                    "jobs_enabled": true,
+                    "collect": [
+                    ],
+                    "eval": {
+                        "minutes": 60,
+                        "template": ""
+                    },
+                    "jobs": [
+                        {
+                            "name": "Internal_RoleGroupOverrides_DeleteExpired"
+                        }
+                    ]
+                }
             },
             "processValue": 0
         },
@@ -2904,13 +2884,13 @@
                     }
                 },
                 "meta_config": {
-                    "created_date_time": 1747665097499,
+                    "created_date_time": 1751315319385,
                     "created_by_id": 2,
-                    "modified_date_time": 1747675118547,
+                    "modified_date_time": 1751316049473,
                     "modified_by_id": 2,
-                    "notes": "",
+                    "notes": "Generate roles for defined Role Overrides.",
                     "tags": [
-                        "nim"
+                        "app_RoleGroupoOverrides"
                     ]
                 },
                 "config": {
@@ -2922,85 +2902,6 @@
                     "guardMaxRolesDeleted": 10,
                     "guardMaxGroupsAdded": 10,
                     "guardMaxGroupsRemoved": 10
-                }
-            },
-            "processValue": 0
-        },
-        {
-            "name": "App_RoleGroupOverrides_DeleteExpired",
-            "category": 10,
-            "data": {
-                "type": "sync",
-                "name": "App_RoleGroupOverrides_DeleteExpired",
-                "enabled": true,
-                "schedule": {
-                    "second": {
-                        "mode": 1,
-                        "at": 0,
-                        "n": 1,
-                        "list": [
-                        ]
-                    },
-                    "minute": {
-                        "mode": 1,
-                        "at": 15,
-                        "n": 1,
-                        "list": [
-                        ]
-                    },
-                    "hour": {
-                        "mode": 1,
-                        "at": 3,
-                        "n": 1,
-                        "list": [
-                        ]
-                    },
-                    "day_month": {
-                        "mode": 0,
-                        "at": 0,
-                        "n": 1,
-                        "list": [
-                        ]
-                    },
-                    "month": {
-                        "mode": 0,
-                        "at": 0,
-                        "n": 1,
-                        "list": [
-                        ]
-                    },
-                    "day_week": {
-                        "mode": 0,
-                        "at": 0,
-                        "n": 1,
-                        "list": [
-                        ]
-                    }
-                },
-                "meta_config": {
-                    "created_date_time": 1747675143140,
-                    "created_by_id": 2,
-                    "modified_date_time": 1747675166177,
-                    "modified_by_id": 2,
-                    "notes": "",
-                    "tags": [
-                    ]
-                },
-                "config": {
-                    "collect_enabled": false,
-                    "eval_enabled": false,
-                    "jobs_enabled": true,
-                    "collect": [
-                    ],
-                    "eval": {
-                        "minutes": 60,
-                        "template": ""
-                    },
-                    "jobs": [
-                        {
-                            "name": "Internal_RoleGroupOverrides_DeleteExpired"
-                        }
-                    ]
                 }
             },
             "processValue": 0
@@ -4321,6 +4222,20 @@
                                                     "alignment": "",
                                                     "actions": [
                                                         {
+                                                            "variable": "ti_Notes",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
+                                                            "variable": "dt_ExpiresOn",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4425,6 +4340,20 @@
                                                             ],
                                                             "output_variables": [
                                                             ]
+                                                        },
+                                                        {
+                                                            "variable": "dt_ExpiresOn",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
+                                                            "variable": "ti_Notes",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
                                                         },
                                                         {
                                                             "type": "Navigate to form",
@@ -4661,6 +4590,13 @@
                                                     "alignment": "",
                                                     "actions": [
                                                         {
+                                                            "variable": "dt_ExpiresOn",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4772,6 +4708,13 @@
                                                             ],
                                                             "output_variables": [
                                                             ]
+                                                        },
+                                                        {
+                                                            "variable": "dt_ExpiresOn",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
                                                         },
                                                         {
                                                             "type": "Navigate to form",
@@ -5020,6 +4963,13 @@
                                                     "alignment": "",
                                                     "actions": [
                                                         {
+                                                            "variable": "ti_Notes",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -5133,6 +5083,13 @@
                                                             ]
                                                         },
                                                         {
+                                                            "variable": "ti_Notes",
+                                                            "type": "Reset variable",
+                                                            "event": {
+                                                                "type": "button click"
+                                                            }
+                                                        },
+                                                        {
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -5236,7 +5193,7 @@
                         "name": "v_ExpiresOn",
                         "type": 1,
                         "javascript": {
-                            "javascript": "return new Date(data['grid_ExpiresOn']);"
+                            "javascript": "return data['grid_ExpiresOn'] ? new Date(data['grid_ExpiresOn']) : '';"
                         }
                     }
                 ],
@@ -5259,16 +5216,16 @@
                 "valid_variables": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1747249993534,
+                    "created_date_time": 1751315319389,
                     "created_by_id": 2,
-                    "modified_date_time": 1747671530865,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Add users to Groups managed by NIM, who don't normally qualify for the group.",
                     "tags": [
                         "nim"
                     ]
                 },
-                "stamp_ci_lib": 0,
+                "stamp_ci_lib": 4,
                 "syscol_app_tables": [
                     [
                         "internal.RoleGroupOverrides",
@@ -5340,6 +5297,12 @@
                     }
                 ],
                 "rows": [
+                    {
+                        "ID": "34f4847c-43a2-47b0-953f-0b6877da8122",
+                        "GroupID": "00abcd",
+                        "MemberID": "1234",
+                        "Notes": "Test"
+                    }
                 ],
                 "rows_storage_disabled": false
             },
@@ -5350,16 +5313,6 @@
     ],
     "inventory": {
         "resources": [
-            {
-                "n": "internal",
-                "c": 1,
-                "childs": [
-                    {
-                        "n": "RoleGroupOverrides",
-                        "c": 27
-                    }
-                ]
-            },
             {
                 "n": "internal.RoleGroupOverrides.GroupID-AD.Groups.objectGUID",
                 "c": 28,
@@ -5477,6 +5430,24 @@
                 ]
             },
             {
+                "n": "App_RoleGroupOverrides-Memberships",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "Google",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
                 "n": "App_RoleGroupOverrides-MembersPending-AD",
                 "c": 3,
                 "childs": [
@@ -5504,6 +5475,34 @@
                     },
                     {
                         "n": "Google",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_RoleGroupOverrides-RemoveExpired",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_RoleGroupOverrides-RoleGen",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "Google",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
                         "c": 1
                     }
                 ]
@@ -5547,22 +5546,22 @@
                 ]
             },
             {
-                "n": "App_RoleGroupOverrides_RoleGenerate",
-                "c": 14,
-                "childs": [
-                    {
-                        "n": "RoleGroupOverrides",
-                        "c": 24
-                    }
-                ]
-            },
-            {
                 "n": "App_RoleGroupOverrides_DeleteExpired",
                 "c": 10,
                 "childs": [
                     {
                         "n": "Internal_RoleGroupOverrides_DeleteExpired",
                         "c": 8
+                    }
+                ]
+            },
+            {
+                "n": "App_RoleGroupOverrides_RoleGenerate",
+                "c": 14,
+                "childs": [
+                    {
+                        "n": "RoleGroupOverrides",
+                        "c": 24
                     }
                 ]
             },
