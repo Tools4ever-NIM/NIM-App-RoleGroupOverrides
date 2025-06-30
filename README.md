@@ -18,10 +18,12 @@ If Group Overrides are added for non managed groups, they will become managed an
 
 ## Installation
 
- 1. Import and Restore the attached Repository.
- 2. Update the Internal System to include the new RoleGroupOverrides table.
- 3. On the Columns tab of the Internal-RoleGroupOverrides table, set the Key to the ID column, and the ExpiresOn datatype to Date.
- 4. Grant access to the new app as needed.
+ 1. Import the attached Repository.
+ 2. Restore only the Lookup table first: RoleGroupOverrides
+ 3. Update the Internal System to include the new RoleGroupOverrides table. 
+ 4. On the Columns tab of the Internal-RoleGroupOverrides table, set the Key to the ID column, and the ExpiresOn datatype to Date. 
+ 5. Restore everything else in the repository.
+ 6. Grant access to the new app as needed.
 
  
 
