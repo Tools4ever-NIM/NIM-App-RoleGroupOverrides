@@ -2475,7 +2475,8 @@
                 "role_name_column": "cf_RoleName",
                 "role_member_filter": "App_RoleGroupOverrides-Memberships",
                 "role_member_filter_params": {
-                    "GroupID": "GroupID"
+                    "GroupID": "GroupID",
+                    "GroupID_Number": "GroupID_Number"
                 },
                 "role_groups": [
                     {
