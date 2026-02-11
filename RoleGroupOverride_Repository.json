@@ -5322,7 +5322,7 @@
                         "name": "v_GroupID",
                         "type": 1,
                         "javascript": {
-                            "javascript": "let value = (data['grid_GroupID'] ?? data['dd_GroupID']);\nreturn value ? value : '';"
+                            "javascript": "let value = (data['grid_GroupID'] ?? data['dd_GroupID']);\nreturn value ? value : 'null';"
                         }
                     },
                     {
@@ -5350,7 +5350,7 @@
                         "name": "v_GroupID_Number",
                         "type": 1,
                         "javascript": {
-                            "javascript": "let value = (data['grid_GroupID_Number'] ?? data['dd_GroupID_Number']);\nreturn value ? value : '';"
+                            "javascript": "let value = (data['grid_GroupID_Number'] ?? data['dd_GroupID_Number']);\nreturn value ? value : 'null';"
                         }
                     },
                     {
