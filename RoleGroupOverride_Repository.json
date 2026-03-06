@@ -1,9 +1,9 @@
 {
-    "name": "RoleGroupOverrides_App_repo_20251014",
+    "name": "RoleGroupOverrides_App_repo_20260306",
     "type": "partial",
     "host": "DevNIM",
-    "created": 1760473384873,
-    "comment": "Role Group Override App - v5",
+    "created": 1772814727583,
+    "comment": "Role Group Override App - v6 - Fix Repo",
     "resources": [
         {
             "name": "internal.RoleGroupOverrides.GroupID-AD.Groups.objectGUID",
@@ -70,7 +70,7 @@
                         "colrefname": "RoleGroupOverrides",
                         "type": "start",
                         "blocked": false,
-                        "id": "5829b4ff-fdab-4828-920c-f5c0513b9e76",
+                        "id": "cd178399-1974-41fb-8bad-c06145c1606c",
                         "indent": 0,
                         "inherited": false,
                         "enabled": true,
@@ -78,20 +78,20 @@
                         "child_count": 1
                     },
                     {
-                        "type": "and",
+                        "type": "or",
                         "blocked": false,
-                        "id": "088fa962-abd9-4b55-9ece-e0bf3f56ebec",
+                        "id": "78eb55e7-5399-4a05-b52f-a2bf4cfcd2d4",
                         "indent": 1,
                         "inherited": false,
                         "enabled": true,
                         "index": 1,
                         "parent": 0,
-                        "child_count": 2
+                        "child_count": 3
                     },
                     {
-                        "type": "or",
+                        "type": "and",
                         "blocked": false,
-                        "id": "ec13c4c6-ad64-47eb-9123-0c7f0e9e209c",
+                        "id": "3fca0273-4cdb-4e30-a8ae-4825e3c94a46",
                         "indent": 2,
                         "inherited": false,
                         "enabled": true,
@@ -100,101 +100,22 @@
                         "child_count": 2
                     },
                     {
-                        "type": "and",
+                        "ref_type": "n-1",
+                        "system_name_1": "internal",
+                        "col_name_1": "groups",
+                        "field_n": "GroupID_Number",
+                        "option": "any",
+                        "colrefname": "NIM_Groups",
+                        "recursive": false,
+                        "type": "reference",
                         "blocked": false,
-                        "id": "4c8adaea-160a-40be-8b13-69ee79527c19",
+                        "id": "9502631b-ff83-4bb8-9475-81c57bcdb7b6",
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
                         "index": 3,
                         "parent": 2,
-                        "child_count": 2
-                    },
-                    {
-                        "field_name": "GroupID",
-                        "function_name": "equals (ci)",
-                        "value_vs_parameter": false,
-                        "param_name": "GroupID",
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "b57b47e8-f342-4a89-bce4-beaf45c7498c",
-                        "indent": 4,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 4,
-                        "parent": 3,
                         "child_count": 0
-                    },
-                    {
-                        "field_name": "GroupID",
-                        "function_name": "exists",
-                        "value_vs_parameter": true,
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "088fd423-f74d-479d-bf12-dfac9e74a958",
-                        "indent": 4,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 5,
-                        "parent": 3,
-                        "child_count": 0
-                    },
-                    {
-                        "type": "and",
-                        "blocked": false,
-                        "id": "4f88fb61-06dd-474b-a029-ce3e608bcb86",
-                        "indent": 3,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 6,
-                        "parent": 2,
-                        "child_count": 2
-                    },
-                    {
-                        "field_name": "GroupID_Number",
-                        "function_name": "equals",
-                        "value_vs_parameter": false,
-                        "param_name": "GroupID_Number",
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "86c2691d-0137-4030-b6f3-b66ffe69df3b",
-                        "indent": 4,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 7,
-                        "parent": 6,
-                        "child_count": 0
-                    },
-                    {
-                        "field_name": "GroupID_Number",
-                        "function_name": "not equals",
-                        "value_vs_parameter": true,
-                        "param_name": "",
-                        "operand_value": 0,
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "63b56518-6abe-48d7-b0d2-634cc084bc4f",
-                        "indent": 4,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 8,
-                        "parent": 6,
-                        "child_count": 0
-                    },
-                    {
-                        "type": "or",
-                        "blocked": false,
-                        "id": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064",
-                        "indent": 2,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 9,
-                        "parent": 1,
-                        "child_count": 3
                     },
                     {
                         "ref_type": "n-1",
@@ -206,33 +127,44 @@
                         "recursive": false,
                         "type": "reference",
                         "blocked": false,
-                        "id": "2b6a9402-e409-455a-9b81-0047a55977b8",
+                        "id": "dfd9e5fc-1fa8-46c4-a895-7199c44bcf7b",
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 10,
-                        "parent": 9,
+                        "index": 4,
+                        "parent": 2,
                         "child_count": 0
                     },
                     {
+                        "type": "and",
+                        "blocked": false,
+                        "id": "1508b4d6-fbda-44a9-b536-ec735b72e6c0",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 5,
+                        "parent": 1,
+                        "child_count": 2
+                    },
+                    {
                         "ref_type": "n-n",
-                        "system_name_n": "AD",
-                        "col_name_n": "Users",
+                        "system_name_n": "Google",
+                        "col_name_n": "groups",
                         "system_name_link": "intersystem",
                         "col_name_link": "intercol",
-                        "field_link_m": "MemberID",
-                        "field_link_n": "objectGUID",
+                        "field_link_m": "GroupID",
+                        "field_link_n": "id",
                         "option": "any",
-                        "colrefname": "AD_Users",
+                        "colrefname": "G_Groups",
                         "recursive": false,
                         "type": "reference",
                         "blocked": false,
-                        "id": "259726d8-b173-444f-94c6-ac5a7e3adfa7",
+                        "id": "cd68c2c5-984b-475d-9f50-3cb1e5d3dfac",
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 11,
-                        "parent": 9,
+                        "index": 6,
+                        "parent": 5,
                         "child_count": 0
                     },
                     {
@@ -248,12 +180,65 @@
                         "recursive": false,
                         "type": "reference",
                         "blocked": false,
-                        "id": "43a83122-370a-499e-915e-f676dd13b13a",
+                        "id": "cdf363ab-81e6-41b8-9b46-69ae484596f6",
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 12,
-                        "parent": 9,
+                        "index": 7,
+                        "parent": 5,
+                        "child_count": 0
+                    },
+                    {
+                        "type": "and",
+                        "blocked": false,
+                        "id": "d58a0c92-074a-4b40-8e2a-964e528d973e",
+                        "indent": 2,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 8,
+                        "parent": 1,
+                        "child_count": 2
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "AD",
+                        "col_name_n": "Groups",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "GroupID",
+                        "field_link_n": "objectGUID",
+                        "option": "any",
+                        "colrefname": "AD_Groups",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "e47c56cc-e06a-4f3f-a091-49f70b97c80d",
+                        "indent": 3,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 9,
+                        "parent": 8,
+                        "child_count": 0
+                    },
+                    {
+                        "ref_type": "n-n",
+                        "system_name_n": "AD",
+                        "col_name_n": "Users",
+                        "system_name_link": "intersystem",
+                        "col_name_link": "intercol",
+                        "field_link_m": "MemberID",
+                        "field_link_n": "objectGUID",
+                        "option": "any",
+                        "colrefname": "AD_Users",
+                        "recursive": false,
+                        "type": "reference",
+                        "blocked": false,
+                        "id": "47cea1e0-e38d-474a-abdd-1f4241170b0b",
+                        "indent": 3,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 10,
+                        "parent": 8,
                         "child_count": 0
                     }
                 ],
@@ -387,10 +372,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448926,
+                    "created_date_time": 1772814628238,
                     "created_by_id": 2,
-                    "modified_date_time": 1759786615131,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Provides data to Audit Query used in main app grid, list of groups with overrides.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -492,10 +477,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448927,
+                    "created_date_time": 1772814628240,
                     "created_by_id": 2,
-                    "modified_date_time": 1759786836118,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Used in Group Dropdown when adding a new override.  Other systems should be appended to this filter.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -582,10 +567,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448928,
+                    "created_date_time": 1772814628241,
                     "created_by_id": 2,
-                    "modified_date_time": 1759786931116,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Sub filter appends to the AD filter.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -693,10 +678,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1759336356843,
+                    "created_date_time": 1772814628242,
                     "created_by_id": 2,
-                    "modified_date_time": 1759854208829,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "",
                     "tags": [
                     ]
@@ -733,7 +718,8 @@
                         "enabled": true,
                         "index": 1,
                         "parent": 0,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "cd178399-1974-41fb-8bad-c06145c1606c"
                     },
                     {
                         "type": "or",
@@ -744,7 +730,8 @@
                         "enabled": true,
                         "index": 2,
                         "parent": 1,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "32cdeb1c-079e-4a12-aab7-a2b58c928893"
                     },
                     {
                         "field_name": "GroupID",
@@ -760,7 +747,8 @@
                         "enabled": true,
                         "index": 3,
                         "parent": 2,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "16675c03-b852-4ddf-a9bb-7228841f047c"
                     },
                     {
                         "field_name": "GroupID_Number",
@@ -776,7 +764,8 @@
                         "enabled": true,
                         "index": 4,
                         "parent": 2,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "16675c03-b852-4ddf-a9bb-7228841f047c"
                     },
                     {
                         "type": "or",
@@ -787,7 +776,8 @@
                         "enabled": true,
                         "index": 5,
                         "parent": 1,
-                        "child_count": 3
+                        "child_count": 3,
+                        "parentId": "32cdeb1c-079e-4a12-aab7-a2b58c928893"
                     },
                     {
                         "type": "and",
@@ -798,7 +788,8 @@
                         "enabled": true,
                         "index": 6,
                         "parent": 5,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "78eb55e7-5399-4a05-b52f-a2bf4cfcd2d4"
                     },
                     {
                         "ref_type": "n-1",
@@ -816,7 +807,8 @@
                         "enabled": true,
                         "index": 7,
                         "parent": 6,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "bd4af4c2-7b26-4f8a-ada4-18fee71a25de"
                     },
                     {
                         "ref_type": "n-1",
@@ -834,7 +826,8 @@
                         "enabled": true,
                         "index": 8,
                         "parent": 6,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "bd4af4c2-7b26-4f8a-ada4-18fee71a25de"
                     },
                     {
                         "type": "and",
@@ -845,7 +838,8 @@
                         "enabled": true,
                         "index": 9,
                         "parent": 5,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "78eb55e7-5399-4a05-b52f-a2bf4cfcd2d4"
                     },
                     {
                         "ref_type": "n-n",
@@ -866,7 +860,8 @@
                         "enabled": true,
                         "index": 10,
                         "parent": 9,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "1508b4d6-fbda-44a9-b536-ec735b72e6c0"
                     },
                     {
                         "ref_type": "n-n",
@@ -887,7 +882,8 @@
                         "enabled": true,
                         "index": 11,
                         "parent": 9,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "1508b4d6-fbda-44a9-b536-ec735b72e6c0"
                     },
                     {
                         "type": "and",
@@ -898,7 +894,8 @@
                         "enabled": true,
                         "index": 12,
                         "parent": 5,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "78eb55e7-5399-4a05-b52f-a2bf4cfcd2d4"
                     },
                     {
                         "ref_type": "n-n",
@@ -919,7 +916,8 @@
                         "enabled": true,
                         "index": 13,
                         "parent": 12,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "d58a0c92-074a-4b40-8e2a-964e528d973e"
                     },
                     {
                         "ref_type": "n-n",
@@ -940,7 +938,8 @@
                         "enabled": true,
                         "index": 14,
                         "parent": 12,
-                        "child_count": 0
+                        "child_count": 0,
+                        "parentId": "d58a0c92-074a-4b40-8e2a-964e528d973e"
                     }
                 ],
                 "filter_columns": [
@@ -1084,10 +1083,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448929,
+                    "created_date_time": 1772814628243,
                     "created_by_id": 2,
-                    "modified_date_time": 1759771285549,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Used in grid showing the list of override users for the selected group.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -1125,7 +1124,8 @@
                         "enabled": true,
                         "index": 1,
                         "parent": 0,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "5829b4ff-fdab-4828-920c-f5c0513b9e76"
                     },
                     {
                         "type": "or",
@@ -1136,7 +1136,53 @@
                         "enabled": true,
                         "index": 2,
                         "parent": 1,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "088fa962-abd9-4b55-9ece-e0bf3f56ebec"
+                    },
+                    {
+                        "type": "and",
+                        "blocked": false,
+                        "id": "4c8adaea-160a-40be-8b13-69ee79527c19",
+                        "indent": 3,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 3,
+                        "parent": 2,
+                        "child_count": 2,
+                        "parentId": "ec13c4c6-ad64-47eb-9123-0c7f0e9e209c"
+                    },
+                    {
+                        "field_name": "GroupID",
+                        "function_name": "equals (ci)",
+                        "value_vs_parameter": false,
+                        "param_name": "GroupID",
+                        "param_expression": false,
+                        "type": "expression",
+                        "blocked": false,
+                        "id": "b57b47e8-f342-4a89-bce4-beaf45c7498c",
+                        "indent": 4,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 4,
+                        "parent": 3,
+                        "child_count": 0,
+                        "parentId": "4c8adaea-160a-40be-8b13-69ee79527c19"
+                    },
+                    {
+                        "field_name": "GroupID",
+                        "function_name": "exists",
+                        "value_vs_parameter": true,
+                        "param_expression": false,
+                        "type": "expression",
+                        "blocked": false,
+                        "id": "088fd423-f74d-479d-bf12-dfac9e74a958",
+                        "indent": 4,
+                        "inherited": false,
+                        "enabled": true,
+                        "index": 5,
+                        "parent": 3,
+                        "child_count": 0,
+                        "parentId": "4c8adaea-160a-40be-8b13-69ee79527c19"
                     },
                     {
                         "type": "and",
@@ -1145,9 +1191,10 @@
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 3,
+                        "index": 6,
                         "parent": 2,
-                        "child_count": 2
+                        "child_count": 2,
+                        "parentId": "ec13c4c6-ad64-47eb-9123-0c7f0e9e209c"
                     },
                     {
                         "field_name": "GroupID_Number",
@@ -1161,14 +1208,16 @@
                         "indent": 4,
                         "inherited": false,
                         "enabled": true,
-                        "index": 4,
-                        "parent": 3,
-                        "child_count": 0
+                        "index": 7,
+                        "parent": 6,
+                        "child_count": 0,
+                        "parentId": "4f88fb61-06dd-474b-a029-ce3e608bcb86"
                     },
                     {
                         "field_name": "GroupID_Number",
                         "function_name": "not equals",
                         "value_vs_parameter": true,
+                        "param_name": "",
                         "operand_value": 0,
                         "param_expression": false,
                         "type": "expression",
@@ -1177,25 +1226,10 @@
                         "indent": 4,
                         "inherited": false,
                         "enabled": true,
-                        "index": 5,
-                        "parent": 3,
-                        "child_count": 0
-                    },
-                    {
-                        "field_name": "GroupID",
-                        "function_name": "equals (ci)",
-                        "value_vs_parameter": false,
-                        "param_name": "GroupID",
-                        "param_expression": false,
-                        "type": "expression",
-                        "blocked": false,
-                        "id": "3bbedfba-0aaf-459e-9a25-fa285ee0fd81",
-                        "indent": 3,
-                        "inherited": false,
-                        "enabled": true,
-                        "index": 6,
-                        "parent": 2,
-                        "child_count": 0
+                        "index": 8,
+                        "parent": 6,
+                        "child_count": 0,
+                        "parentId": "4f88fb61-06dd-474b-a029-ce3e608bcb86"
                     },
                     {
                         "type": "or",
@@ -1204,9 +1238,10 @@
                         "indent": 2,
                         "inherited": false,
                         "enabled": true,
-                        "index": 7,
+                        "index": 9,
                         "parent": 1,
-                        "child_count": 3
+                        "child_count": 3,
+                        "parentId": "088fa962-abd9-4b55-9ece-e0bf3f56ebec"
                     },
                     {
                         "ref_type": "n-1",
@@ -1222,9 +1257,10 @@
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 8,
-                        "parent": 7,
-                        "child_count": 0
+                        "index": 10,
+                        "parent": 9,
+                        "child_count": 0,
+                        "parentId": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064"
                     },
                     {
                         "ref_type": "n-n",
@@ -1243,9 +1279,10 @@
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 9,
-                        "parent": 7,
-                        "child_count": 0
+                        "index": 11,
+                        "parent": 9,
+                        "child_count": 0,
+                        "parentId": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064"
                     },
                     {
                         "ref_type": "n-n",
@@ -1264,9 +1301,10 @@
                         "indent": 3,
                         "inherited": false,
                         "enabled": true,
-                        "index": 10,
-                        "parent": 7,
-                        "child_count": 0
+                        "index": 12,
+                        "parent": 9,
+                        "child_count": 0,
+                        "parentId": "6bf8bd3b-d220-4abf-9a32-6a413a9ac064"
                     }
                 ],
                 "filter_columns": [
@@ -1394,10 +1432,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448930,
+                    "created_date_time": 1772814628244,
                     "created_by_id": 2,
-                    "modified_date_time": 1759773763734,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Membership filter used by Role Model.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -1620,10 +1658,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448932,
+                    "created_date_time": 1772814628245,
                     "created_by_id": 2,
-                    "modified_date_time": 1759340559565,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Lists available users that do not have an override for the selected group.  Other systems users should be appended to this filter.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -1848,7 +1886,7 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448933,
+                    "created_date_time": 1772814628246,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2125,10 +2163,10 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1759337522363,
+                    "created_date_time": 1772814628247,
                     "created_by_id": 2,
-                    "modified_date_time": 1759773593188,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "",
                     "tags": [
                     ]
@@ -2249,7 +2287,7 @@
                 "lookups": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448934,
+                    "created_date_time": 1772814628248,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2449,10 +2487,10 @@
                     }
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448935,
+                    "created_date_time": 1772814628249,
                     "created_by_id": 2,
-                    "modified_date_time": 1759774453361,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Role Generator filter used to create roles for overridden groups.",
                     "tags": [
                         "app_RoleGroupOverrides"
@@ -2496,7 +2534,7 @@
                 ],
                 "nimOnlyKey": false,
                 "meta_config": {
-                    "created_date_time": 1758650448936,
+                    "created_date_time": 1772813257389,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2566,7 +2604,7 @@
             "data": {
                 "jobdef_name": "Internal_RoleGroupOverrides_DeleteExpired",
                 "meta_config": {
-                    "created_date_time": 1758650448938,
+                    "created_date_time": 1772813257392,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2638,7 +2676,7 @@
                     }
                 },
                 "meta_config": {
-                    "created_date_time": 1758650448940,
+                    "created_date_time": 1772813257394,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2723,7 +2761,7 @@
                     }
                 },
                 "meta_config": {
-                    "created_date_time": 1758650448941,
+                    "created_date_time": 1772813257396,
                     "created_by_id": 2,
                     "modified_date_time": 0,
                     "modified_by_id": -1,
@@ -2782,7 +2820,19 @@
             "name": "RoleGroupOverrides",
             "category": 26,
             "data": {
+                "app_resources": {
+                    "actions": [
+                    ],
+                    "filters": [
+                    ],
+                    "functions": [
+                    ],
+                    "tables": [
+                    ]
+                },
+                "app_storage_stamp": 0,
                 "name": "RoleGroupOverrides",
+                "detached": false,
                 "forms": [
                     {
                         "name": "main",
@@ -2835,6 +2885,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "left",
@@ -2890,6 +2942,8 @@
                                                     "actions": [
                                                         {
                                                             "app_name": "Dashboard",
+                                                            "ar_info": "",
+                                                            "cid": 208,
                                                             "type": "Start app",
                                                             "event": {
                                                                 "type": "button click"
@@ -2911,7 +2965,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -2947,7 +3003,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -2987,6 +3045,7 @@
                                                 "unit": {
                                                     "font_size": "",
                                                     "target_grid": "grid_Overrides",
+                                                    "rounded_look": false,
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -3043,6 +3102,8 @@
                                                     "align_vertical": "",
                                                     "actions": [
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 209,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -3066,7 +3127,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3083,6 +3146,8 @@
                                                     "align_vertical": "",
                                                     "actions": [
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 210,
                                                             "type": "Set grid view",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3093,6 +3158,8 @@
                                                             "view_name": "Members"
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 211,
                                                             "type": "Set grid view",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3109,6 +3176,8 @@
                                                             "description": "Remove Membership Override ",
                                                             "event_generate": false,
                                                             "hide_protected_data": true,
+                                                            "ar_info": "",
+                                                            "cid": 212,
                                                             "type": "Target system function execution",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3131,6 +3200,8 @@
                                                             ]
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 213,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3139,6 +3210,8 @@
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 214,
                                                             "type": "Set grid view",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3149,6 +3222,8 @@
                                                             "view_name": "Members"
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 215,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3159,6 +3234,8 @@
                                                             "form_name": "update_date"
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 216,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3175,6 +3252,8 @@
                                                             "description": "Remove Membership Override:  {grid_GroupName} -- Member: {grid_MemberName}",
                                                             "event_generate": false,
                                                             "hide_protected_data": true,
+                                                            "ar_info": "",
+                                                            "cid": 217,
                                                             "type": "Target system function execution",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3197,6 +3276,8 @@
                                                             ]
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 218,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "grid cell click",
@@ -3226,12 +3307,16 @@
                                                     "views": {
                                                         "table_views": {
                                                             "Groups": {
+                                                                "ar_info": "",
                                                                 "table_type": "query",
                                                                 "table_name": "RoleGroupOverrides_GroupList",
                                                                 "columns": [
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cc_Handle",
                                                                         "column_type": 2,
                                                                         "column_width": 64,
@@ -3242,8 +3327,11 @@
                                                                         "script": "return {\n 'type': 'info',\n //'icon': string, // (optional, name of icon),\n //'class': string,\n //'style': {},\n 'text': ''\n}"
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_GroupName",
                                                                         "column_type": 0,
                                                                         "column_width": 154,
@@ -3254,8 +3342,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_System",
                                                                         "column_type": 0,
                                                                         "column_width": 103,
@@ -3266,8 +3357,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "MemberCount",
                                                                         "column_type": 0,
                                                                         "column_width": 143,
@@ -3278,8 +3372,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "GroupID",
                                                                         "column_type": 0,
                                                                         "column_width": 110,
@@ -3290,8 +3387,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "GroupID_Number",
                                                                         "column_type": 0,
                                                                         "column_width": 100,
@@ -3308,12 +3408,16 @@
                                                                 "view_display_name": ""
                                                             },
                                                             "Members": {
+                                                                "ar_info": "",
                                                                 "table_type": "filter",
                                                                 "table_name": "App_RoleGroupOverrides-MemberList",
                                                                 "columns": [
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cc_remove",
                                                                         "column_type": 2,
                                                                         "column_width": 64,
@@ -3324,8 +3428,11 @@
                                                                         "script": "let rowType = 'button';\nlet rowText = '';\nlet rowClass = 'btn badge btn-danger position-absolute top-50 start-50 translate-middle' ;\nlet rowIcon = 'eye-slash';\n\nreturn {\n  'type': rowType,\n  'text': rowText,\n  'class': rowClass,\n  'icon': rowIcon,\n  'style': { }\n}\n"
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_MemberName",
                                                                         "column_type": 0,
                                                                         "column_width": 143,
@@ -3336,8 +3443,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_Username",
                                                                         "column_type": 0,
                                                                         "column_width": 119,
@@ -3348,8 +3458,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "ExpiresOn",
                                                                         "column_type": 0,
                                                                         "column_width": 119,
@@ -3360,8 +3473,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "Notes",
                                                                         "column_type": 0,
                                                                         "column_width": 96,
@@ -3372,8 +3488,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "RoleGroupOverrides.ID",
                                                                         "column_type": 0,
                                                                         "column_width": 189,
@@ -3384,8 +3503,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "MemberID",
                                                                         "column_type": 0,
                                                                         "column_width": 122,
@@ -3396,8 +3518,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "MemberID_Number",
                                                                         "column_type": 0,
                                                                         "column_width": 172,
@@ -3408,8 +3533,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_GroupName",
                                                                         "column_type": 0,
                                                                         "column_width": 145,
@@ -3420,8 +3548,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "GroupID",
                                                                         "column_type": 0,
                                                                         "column_width": 110,
@@ -3432,8 +3563,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "GroupID_Number",
                                                                         "column_type": 0,
                                                                         "column_width": 160,
@@ -3446,6 +3580,7 @@
                                                                 ],
                                                                 "params": [
                                                                     {
+                                                                        "ar_info": "",
                                                                         "param_name": "GroupID",
                                                                         "description": "",
                                                                         "data_type": 0,
@@ -3457,6 +3592,7 @@
                                                                         "variable_name": "v_GroupID"
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "param_name": "GroupID_Number",
                                                                         "description": "",
                                                                         "data_type": 1,
@@ -3481,7 +3617,12 @@
                                                     "title_text": "",
                                                     "height": "300px",
                                                     "top_height": "2em",
-                                                    "view_variable_name": ""
+                                                    "view_variable_name": "",
+                                                    "border_radius": "",
+                                                    "border_top": "",
+                                                    "border_bottom": "",
+                                                    "border_radius_default": "",
+                                                    "grid_spacing": ""
                                                 }
                                             }
                                         }
@@ -3489,7 +3630,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3512,6 +3655,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -3533,7 +3678,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3574,6 +3721,8 @@
                                                     "align_vertical": "",
                                                     "actions": [
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 219,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "button click"
@@ -3595,7 +3744,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 }
                             ]
                         },
@@ -3605,6 +3756,13 @@
                             "child_ignore_backdrop_click": true,
                             "child_modal_size": "",
                             "form_function": "general",
+                            "color_settings_default": true,
+                            "color_background_dark": "#2b3035",
+                            "color_background_dark_opacity": 1,
+                            "color_background_dark_blur": 0,
+                            "color_background_light": "#f8f9fa",
+                            "color_background_light_opacity": 1,
+                            "color_background_light_blur": 0,
                             "actions_description": "",
                             "actions_wait": false,
                             "alignment": "",
@@ -3670,6 +3828,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -3691,7 +3851,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3727,7 +3889,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3749,12 +3913,16 @@
                                                     "multiline_count": 3,
                                                     "option_values": "",
                                                     "table": {
+                                                        "ar_info": "",
                                                         "table_type": "filter",
                                                         "table_name": "App_RoleGroupOverrides-GroupsDD-NIM",
                                                         "columns": [
                                                             {
+                                                                "ar_info": "",
                                                                 "color": "",
                                                                 "column_show": true,
+                                                                "column_no_resize": false,
+                                                                "column_empty_header": false,
                                                                 "column_name": "cf_GroupKey",
                                                                 "column_type": 0,
                                                                 "column_width": 50,
@@ -3765,8 +3933,11 @@
                                                                 "key": false
                                                             },
                                                             {
+                                                                "ar_info": "",
                                                                 "color": "",
                                                                 "column_show": true,
+                                                                "column_no_resize": false,
+                                                                "column_empty_header": false,
                                                                 "column_name": "cf_GroupID",
                                                                 "column_type": 0,
                                                                 "column_width": 50,
@@ -3777,8 +3948,11 @@
                                                                 "key": false
                                                             },
                                                             {
+                                                                "ar_info": "",
                                                                 "color": "",
                                                                 "column_show": true,
+                                                                "column_no_resize": false,
+                                                                "column_empty_header": false,
                                                                 "column_name": "cf_GroupID_Number",
                                                                 "column_type": 0,
                                                                 "column_width": 50,
@@ -3789,8 +3963,11 @@
                                                                 "key": false
                                                             },
                                                             {
+                                                                "ar_info": "",
                                                                 "color": "",
                                                                 "column_show": true,
+                                                                "column_no_resize": false,
+                                                                "column_empty_header": false,
                                                                 "column_name": "cf_GroupName",
                                                                 "column_type": 0,
                                                                 "column_width": 50,
@@ -3801,8 +3978,11 @@
                                                                 "key": false
                                                             },
                                                             {
+                                                                "ar_info": "",
                                                                 "color": "",
                                                                 "column_show": true,
+                                                                "column_no_resize": false,
+                                                                "column_empty_header": false,
                                                                 "column_name": "cf_System",
                                                                 "column_type": 0,
                                                                 "column_width": 50,
@@ -3850,7 +4030,9 @@
                                     "hide": {
                                         "javascript": "return data['grid_MemberCount'] ? true : false;"
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3873,6 +4055,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -3894,7 +4078,9 @@
                                     "hide": {
                                         "javascript": "return data['grid_MemberCount'] ? false : true;"
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3927,7 +4113,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -3965,12 +4153,16 @@
                                                     "views": {
                                                         "table_views": {
                                                             "default": {
+                                                                "ar_info": "",
                                                                 "table_type": "filter",
                                                                 "table_name": "App_RoleGroupOverrides-MembersPending-NIM",
                                                                 "columns": [
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_MemberID",
                                                                         "column_type": 0,
                                                                         "column_width": 137,
@@ -3981,8 +4173,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_MemberID_Number",
                                                                         "column_type": 0,
                                                                         "column_width": 187,
@@ -3993,8 +4188,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_MemberName",
                                                                         "column_type": 0,
                                                                         "column_width": "150",
@@ -4005,8 +4203,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_MemberEmail",
                                                                         "column_type": 0,
                                                                         "column_width": "150",
@@ -4017,8 +4218,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_EmployeeID",
                                                                         "column_type": 0,
                                                                         "column_width": 144,
@@ -4029,8 +4233,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": true,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_Type",
                                                                         "column_type": 0,
                                                                         "column_width": "100",
@@ -4041,8 +4248,11 @@
                                                                         "key": false
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "color": "",
                                                                         "column_show": false,
+                                                                        "column_no_resize": false,
+                                                                        "column_empty_header": false,
                                                                         "column_name": "cf_System",
                                                                         "column_type": 0,
                                                                         "column_width": "110",
@@ -4055,6 +4265,7 @@
                                                                 ],
                                                                 "params": [
                                                                     {
+                                                                        "ar_info": "",
                                                                         "param_name": "GroupID",
                                                                         "description": "",
                                                                         "data_type": 0,
@@ -4066,6 +4277,7 @@
                                                                         "variable_name": "v_GroupID"
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "param_name": "System",
                                                                         "description": "",
                                                                         "data_type": 0,
@@ -4077,6 +4289,7 @@
                                                                         "variable_name": "v_System"
                                                                     },
                                                                     {
+                                                                        "ar_info": "",
                                                                         "param_name": "GroupID_Number",
                                                                         "description": "",
                                                                         "data_type": 1,
@@ -4101,7 +4314,12 @@
                                                     "title_text": "Accounts",
                                                     "height": "300px",
                                                     "top_height": "2em",
-                                                    "view_variable_name": ""
+                                                    "view_variable_name": "",
+                                                    "border_radius": "",
+                                                    "border_top": "",
+                                                    "border_bottom": "",
+                                                    "border_radius_default": "",
+                                                    "grid_spacing": ""
                                                 }
                                             }
                                         }
@@ -4109,7 +4327,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4169,7 +4389,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4217,7 +4439,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4259,6 +4483,8 @@
                                                     "actions": [
                                                         {
                                                             "variable": "ti_Notes",
+                                                            "ar_info": "",
+                                                            "cid": 220,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4266,6 +4492,8 @@
                                                         },
                                                         {
                                                             "variable": "dt_ExpiresOn",
+                                                            "ar_info": "",
+                                                            "cid": 221,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4273,6 +4501,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupKey",
+                                                            "ar_info": "",
+                                                            "cid": 222,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4280,6 +4510,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupID",
+                                                            "ar_info": "",
+                                                            "cid": 223,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4287,6 +4519,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupID_Number",
+                                                            "ar_info": "",
+                                                            "cid": 224,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4294,6 +4528,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupName",
+                                                            "ar_info": "",
+                                                            "cid": 225,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4301,12 +4537,16 @@
                                                         },
                                                         {
                                                             "variable": "dd_System",
+                                                            "ar_info": "",
+                                                            "cid": 226,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 227,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4369,6 +4609,8 @@
                                                             "description": "Add Group Overrides to {v_GroupName}",
                                                             "event_generate": false,
                                                             "hide_protected_data": true,
+                                                            "ar_info": "",
+                                                            "cid": 228,
                                                             "type": "Target system function execution",
                                                             "event": {
                                                                 "type": "button click"
@@ -4440,6 +4682,8 @@
                                                         },
                                                         {
                                                             "variable": "dt_ExpiresOn",
+                                                            "ar_info": "",
+                                                            "cid": 229,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4447,6 +4691,8 @@
                                                         },
                                                         {
                                                             "variable": "ti_Notes",
+                                                            "ar_info": "",
+                                                            "cid": 230,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4454,6 +4700,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupKey",
+                                                            "ar_info": "",
+                                                            "cid": 231,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4461,6 +4709,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupID",
+                                                            "ar_info": "",
+                                                            "cid": 232,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4468,6 +4718,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupID_Number",
+                                                            "ar_info": "",
+                                                            "cid": 233,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4475,6 +4727,8 @@
                                                         },
                                                         {
                                                             "variable": "dd_GroupName",
+                                                            "ar_info": "",
+                                                            "cid": 234,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
@@ -4482,12 +4736,16 @@
                                                         },
                                                         {
                                                             "variable": "dd_System",
+                                                            "ar_info": "",
+                                                            "cid": 235,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 236,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4496,6 +4754,8 @@
                                                             "form_name": ""
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 237,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "button click"
@@ -4517,7 +4777,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 }
                             ]
                         },
@@ -4527,6 +4789,13 @@
                             "child_ignore_backdrop_click": true,
                             "child_modal_size": "medium",
                             "form_function": "general",
+                            "color_settings_default": true,
+                            "color_background_dark": "#2b3035",
+                            "color_background_dark_opacity": 1,
+                            "color_background_dark_blur": 0,
+                            "color_background_light": "#f8f9fa",
+                            "color_background_light_opacity": 1,
+                            "color_background_light_blur": 0,
                             "actions_description": "",
                             "actions_wait": false,
                             "alignment": "",
@@ -4592,6 +4861,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -4613,7 +4884,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4649,7 +4922,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4697,7 +4972,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -4739,12 +5016,16 @@
                                                     "actions": [
                                                         {
                                                             "variable": "dt_ExpiresOn",
+                                                            "ar_info": "",
+                                                            "cid": 238,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 239,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4807,6 +5088,8 @@
                                                             "description": "Update Date for {grid_MemberName}",
                                                             "event_generate": false,
                                                             "hide_protected_data": true,
+                                                            "ar_info": "",
+                                                            "cid": 240,
                                                             "type": "Target system function execution",
                                                             "event": {
                                                                 "type": "button click"
@@ -4865,12 +5148,16 @@
                                                         },
                                                         {
                                                             "variable": "dt_ExpiresOn",
+                                                            "ar_info": "",
+                                                            "cid": 241,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 242,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -4879,6 +5166,8 @@
                                                             "form_name": ""
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 243,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "button click"
@@ -4900,7 +5189,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 }
                             ]
                         },
@@ -4910,6 +5201,13 @@
                             "child_ignore_backdrop_click": true,
                             "child_modal_size": "small",
                             "form_function": "general",
+                            "color_settings_default": true,
+                            "color_background_dark": "#2b3035",
+                            "color_background_dark_opacity": 1,
+                            "color_background_dark_blur": 0,
+                            "color_background_light": "#f8f9fa",
+                            "color_background_light_opacity": 1,
+                            "color_background_light_blur": 0,
                             "actions_description": "",
                             "actions_wait": false,
                             "alignment": "",
@@ -4975,6 +5273,8 @@
                                                     "styles_eval": {
                                                         "javascript": ""
                                                     },
+                                                    "inline": false,
+                                                    "alert_class": "",
                                                     "actions_description": "",
                                                     "actions_wait": false,
                                                     "alignment": "",
@@ -4996,7 +5296,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -5032,7 +5334,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -5092,7 +5396,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 },
                                 {
                                     "cols": [
@@ -5134,12 +5440,16 @@
                                                     "actions": [
                                                         {
                                                             "variable": "ti_Notes",
+                                                            "ar_info": "",
+                                                            "cid": 244,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 245,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -5202,6 +5512,8 @@
                                                             "description": "Update Note for {grid_MemberName}",
                                                             "event_generate": false,
                                                             "hide_protected_data": true,
+                                                            "ar_info": "",
+                                                            "cid": 246,
                                                             "type": "Target system function execution",
                                                             "event": {
                                                                 "type": "button click"
@@ -5260,12 +5572,16 @@
                                                         },
                                                         {
                                                             "variable": "ti_Notes",
+                                                            "ar_info": "",
+                                                            "cid": 247,
                                                             "type": "Reset variable",
                                                             "event": {
                                                                 "type": "button click"
                                                             }
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 248,
                                                             "type": "Navigate to form",
                                                             "event": {
                                                                 "type": "button click"
@@ -5274,6 +5590,8 @@
                                                             "form_name": ""
                                                         },
                                                         {
+                                                            "ar_info": "",
+                                                            "cid": 249,
                                                             "type": "Form initialize",
                                                             "event": {
                                                                 "type": "button click"
@@ -5295,7 +5613,9 @@
                                     "hide": {
                                         "javascript": ""
                                     },
-                                    "row_styles": ""
+                                    "row_styles": "",
+                                    "row_flex": false,
+                                    "row_flex_alignment": ""
                                 }
                             ]
                         },
@@ -5305,6 +5625,13 @@
                             "child_ignore_backdrop_click": true,
                             "child_modal_size": "small",
                             "form_function": "general",
+                            "color_settings_default": true,
+                            "color_background_dark": "#2b3035",
+                            "color_background_dark_opacity": 1,
+                            "color_background_dark_blur": 0,
+                            "color_background_light": "#f8f9fa",
+                            "color_background_light_opacity": 1,
+                            "color_background_light_blur": 0,
                             "actions_description": "",
                             "actions_wait": false,
                             "alignment": "",
@@ -5328,10 +5655,13 @@
                     "color_settings_default": true,
                     "color_background_dark": "#2b3035",
                     "color_background_dark_opacity": 1,
+                    "color_background_dark_blur": 0,
                     "color_background_light": "#f8f9fa",
                     "color_background_light_opacity": 1,
+                    "color_background_light_blur": 0,
                     "description": "Add Users to Role Managed Groups",
                     "display_name": "Role Group Overrides",
+                    "exportable": false,
                     "image": "sitemap-solid.svg",
                     "sort": 1000,
                     "form_size": "small",
@@ -5425,7 +5755,7 @@
                     "output_fields": [
                     ]
                 },
-                "nim_version": 1778,
+                "nim_version": 1797,
                 "password_generator": {
                     "name": "",
                     "input_fields": [
@@ -5436,16 +5766,16 @@
                 "valid_variables": [
                 ],
                 "meta_config": {
-                    "created_date_time": 1758650448944,
+                    "created_date_time": 1772813257403,
                     "created_by_id": 2,
-                    "modified_date_time": 1760112416268,
-                    "modified_by_id": 2,
+                    "modified_date_time": 0,
+                    "modified_by_id": -1,
                     "notes": "Add users to Groups managed by NIM, who don't normally qualify for the group.",
                     "tags": [
                         "nim"
                     ]
                 },
-                "stamp_ci_lib": 0,
+                "stamp_ci_lib": 176,
                 "syscol_app_tables": [
                     [
                         "internal.RoleGroupOverrides",
@@ -5558,6 +5888,94 @@
     "inventory": {
         "resources": [
             {
+                "n": "internal",
+                "c": 1,
+                "childs": [
+                    {
+                        "n": "OverrideFlags",
+                        "c": 27
+                    },
+                    {
+                        "n": "DPWR_Config",
+                        "c": 27
+                    },
+                    {
+                        "n": "RoleGroupOverrides",
+                        "c": 27
+                    }
+                ]
+            },
+            {
+                "n": "internal.OverrideFlags.ID-AD.Users.employeeID",
+                "c": 28,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "internal.users.ExternalID-AD.Users.objectGUID",
+                "c": 28,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Google.users.customSchemas_Tools4ever_ID-internal.OverrideFlags.ID",
+                "c": 28,
+                "childs": [
+                    {
+                        "n": "Google",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD.OrganizationalUnits.objectGUID-internal.DPWR_Config.OU_GUID",
+                "c": 28,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD.Groups.objectGUID-internal.DPWR_Config.Group_GUID",
+                "c": 28,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
                 "n": "internal.RoleGroupOverrides.GroupID-AD.Groups.objectGUID",
                 "c": 28,
                 "childs": [
@@ -5614,6 +6032,400 @@
                 ]
             },
             {
+                "n": "AD_NIM_Memberships_p_GroupCN",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "ad_nim_users_update",
+                        "c": 3
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_Users_Create",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "ad_nim_users_active",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_Users_Delete",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_Users_Disable",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_Users_Update",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "ad_nim_users_active",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_DPWR_Config_List",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_DPWR_Config_OU_Available",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_DPWR_Config_OU_Current",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_NIMMgmt_ListUsers",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_NIMMgmt_Memberships",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_NIMMgmt_Memberships_Available",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_OnboardingManagement_Users",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_Override_Users",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_Override_Users_Available",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_Override_Users_Expired",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "app_override_users",
+                        "c": 3
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_PasswordResetEnrollment_GetEnrollment",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "app_passwordresetenrollment_view",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "App_PasswordResetEnrollment_View",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Create",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_global",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Delete",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_global",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Disable",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_global",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Enable",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_global",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Global",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Groups",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_update",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_NameChange",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_update",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_OUChange",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_update",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "Exclude_OverrideFlags_Update",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "exclude_overrideflags_global",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "RoleModel_Scope_AD_Exclude",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "RoleModel_Scope_Google_Exclude",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "Google",
+                        "c": 1
+                    }
+                ]
+            },
+            {
+                "n": "RoleModel_Scope_NIM_Exclude",
+                "c": 3,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    }
+                ]
+            },
+            {
                 "n": "App_RoleGroupOverrides-GroupList",
                 "c": 3,
                 "childs": [
@@ -5653,24 +6465,6 @@
             },
             {
                 "n": "App_RoleGroupOverrides-GroupsDD-NIM",
-                "c": 3,
-                "childs": [
-                    {
-                        "n": "App_RoleGroupOverrides-GroupsDD-AD",
-                        "c": 3
-                    },
-                    {
-                        "n": "App_RoleGroupOverrides-GroupsDD-Google",
-                        "c": 3
-                    },
-                    {
-                        "n": "internal",
-                        "c": 1
-                    }
-                ]
-            },
-            {
-                "n": "App_RoleGroupOverrides-GroupsDD-NIM_TEST",
                 "c": 3,
                 "childs": [
                     {
@@ -5798,6 +6592,62 @@
                 ]
             },
             {
+                "n": "AD_NIM_User_Create",
+                "c": 6,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Users_Create",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_User_Delete",
+                "c": 6,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Users_Delete",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_User_Disable",
+                "c": 6,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Users_Disable",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_User_Update",
+                "c": 6,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Users_Update",
+                        "c": 3
+                    }
+                ]
+            },
+            {
                 "n": "Internal_RoleGroupOverrides_DeleteExpired",
                 "c": 6,
                 "childs": [
@@ -5807,6 +6657,56 @@
                     },
                     {
                         "n": "App_RoleGroupOverrides-RemoveExpired",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "OverrideFlags_Expired_Delete",
+                "c": 6,
+                "childs": [
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "App_Override_Users_Expired",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "6",
+                "c": 23,
+                "childs": [
+                    {
+                        "n": "AD_NIM_Users_Update",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Memberships_p_GroupCN",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "8",
+                "c": 23,
+                "childs": [
+                    {
+                        "n": "AD_NIM_Users_Update",
+                        "c": 3
+                    },
+                    {
+                        "n": "internal",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_Memberships_p_GroupCN",
                         "c": 3
                     }
                 ]
@@ -5826,12 +6726,68 @@
                 ]
             },
             {
+                "n": "AD_NIM_User_Sync",
+                "c": 8,
+                "childs": [
+                    {
+                        "n": "AD_NIM_User_Create",
+                        "c": 6
+                    },
+                    {
+                        "n": "AD_NIM_User_Update",
+                        "c": 6
+                    },
+                    {
+                        "n": "AD_NIM_User_Disable",
+                        "c": 6
+                    },
+                    {
+                        "n": "AD_NIM_User_Delete",
+                        "c": 6
+                    }
+                ]
+            },
+            {
+                "n": "App_Override_Flags",
+                "c": 8,
+                "childs": [
+                    {
+                        "n": "OverrideFlags_Expired_Delete",
+                        "c": 6
+                    }
+                ]
+            },
+            {
                 "n": "Internal_RoleGroupOverrides_DeleteExpired",
                 "c": 8,
                 "childs": [
                     {
                         "n": "Internal_RoleGroupOverrides_DeleteExpired",
                         "c": 6
+                    }
+                ]
+            },
+            {
+                "n": "AD_NIM_Sync",
+                "c": 10,
+                "childs": [
+                    {
+                        "n": "AD",
+                        "c": 1
+                    },
+                    {
+                        "n": "AD_NIM_User_Sync",
+                        "c": 8
+                    }
+                ]
+            },
+            {
+                "n": "App_OverrideFlags",
+                "c": 10,
+                "childs": [
+                    {
+                        "n": "App_Override_Flags",
+                        "c": 8
                     }
                 ]
             },
@@ -5859,6 +6815,74 @@
                 "n": "RoleGroupOverrides_GroupList",
                 "c": 19,
                 "childs": [
+                ]
+            },
+            {
+                "n": "Delegated_PW_Reset_Config",
+                "c": 26,
+                "childs": [
+                    {
+                        "n": "App_DPWR_Config_List",
+                        "c": 3
+                    },
+                    {
+                        "n": "App_DPWR_Config_OU_Current",
+                        "c": 3
+                    },
+                    {
+                        "n": "App_DPWR_Config_OU_Available",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "NIMMgmt",
+                "c": 26,
+                "childs": [
+                    {
+                        "n": "App_NIMMgmt_ListUsers",
+                        "c": 3
+                    },
+                    {
+                        "n": "App_NIMMgmt_Memberships_Available",
+                        "c": 3
+                    },
+                    {
+                        "n": "App_NIMMgmt_Memberships",
+                        "c": 3
+                    },
+                    {
+                        "n": "user-shield-solid.svg",
+                        "c": 40
+                    }
+                ]
+            },
+            {
+                "n": "OnboardingManagement",
+                "c": 26,
+                "childs": [
+                    {
+                        "n": "App_OnboardingManagement_Users",
+                        "c": 3
+                    }
+                ]
+            },
+            {
+                "n": "OverrideFlags",
+                "c": 26,
+                "childs": [
+                    {
+                        "n": "App_Override_Users",
+                        "c": 3
+                    },
+                    {
+                        "n": "App_Override_Users_Available",
+                        "c": 3
+                    },
+                    {
+                        "n": "user-tag-solid.svg",
+                        "c": 40
+                    }
                 ]
             },
             {
