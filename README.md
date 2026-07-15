@@ -37,3 +37,10 @@ By providing structured management of access exceptions, Role Group Overrides he
  5. On the Relations tab, relate the GroupID_Number to the 'groups' Internal table, and the MemberID_Number to the 'users' Internal table.
  6. Restore everything else in the repository.
  7. Grant access to the new app as needed.
+
+## Screenshots
+<img width="2009" height="1102" alt="image" src="https://github.com/user-attachments/assets/1803214a-2e24-454f-94bc-816a1d7547f3" />
+<img width="2009" height="1102" alt="image" src="https://github.com/user-attachments/assets/141fd66e-9274-4f1b-ad84-c24e8c19aff8" />
+<img width="2009" height="1102" alt="image" src="https://github.com/user-attachments/assets/a2b8bf2a-3ac1-4260-9a3e-36599df53e04" />
+
+
